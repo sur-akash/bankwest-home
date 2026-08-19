@@ -45,7 +45,8 @@
 
   const $ = (id) => document.getElementById(id);
   const el = {
-    scanBtn: $('scan-btn'), scanStatus: $('scan-status'), scanMeter: $('scan-meter'), scanNote: $('scan-note'),
+    scanBtn: $('scan-btn'), scanBtnLabel: $('scan-btn').querySelector('.btn__label'),
+    scanStatus: $('scan-status'), scanMeter: $('scan-meter'), scanNote: $('scan-note'),
     zone: $('zone'), readDate: $('read-date'),
     ledger: $('spend-ledger'),
     incomeTotal: $('income-total'),
@@ -364,7 +365,8 @@
       el.zone.hidden = false;
       renderLedger();
       render();
-      el.scanBtn.textContent = 'Re-read my accounts';
+      // Retarget the label span — writing to the button would drop its badge.
+      el.scanBtnLabel.textContent = 'Re-read my accounts';
       el.scanBtn.disabled = false;
       el.scanBtn.removeAttribute('aria-disabled');
       el.zone.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });

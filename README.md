@@ -55,6 +55,33 @@ of the logo file and centred in a square viewBox.
 | 5 | **Self-serve digital application** — a parallel path to the specialist model, with triage that routes honestly to a human when the case warrants it | [apply.html](apply.html) |
 | 6 | **Repayment Boosters** — roundups, payment splits and Rate Keeper feeding the offset | [boosters.html](boosters.html) |
 
+## The primary button
+
+The main CTA reproduces Bankwest's own hero-button interaction, taken from the
+live site rather than guessed at.
+
+There, the button is a stack of absolutely-positioned layers: a black pill, a
+56px orange circle, and a 79px lime circle rotated 45° holding the arrow, with
+the sizes driven by inline styles that JavaScript rewrites on hover. Hovering it
+shows what those layers are for — an orange panel wipes across the pill from the
+left, the badge rides its leading edge to the right and flips to black, and the
+arrow un-rotates from ↗ to →. 400ms, ease-in-out.
+
+Ours gets there with CSS only. The wipe is a `::before` (so no extra markup),
+kept above the pill but below the label with `isolation: isolate` and
+`z-index: -1`. At rest it is sized from `--badge` rather than from the button
+box, so it is exactly the badge and therefore invisible underneath it; on hover
+it expands past the 1px border to cover the pill edge to edge. The badge itself
+animates `left` from `--inset` to `calc(100% - --badge - --inset)`, which lands
+it flush right at any button width without JavaScript.
+
+The arrow is stored as a plain right-arrow path and rotated −45° by CSS at rest,
+so a single icon covers both states. `--badge` and `--inset` are the only knobs;
+`.btn--sm` just redeclares them.
+
+Every other variant picks up Bankwest's focus ring (2px at 2px offset) and press
+state (drops to `--surface-inverse-1`).
+
 ## The cost-of-a-home scene
 
 Under the calculators on the homepage, a price slider drives an illustrated block
