@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply online — or talk to a specialist | Bankwest</title>
+<meta name="description" content="A fully self-serve digital home loan application for straightforward buyers and refinancers, running alongside our specialist-led path. Switch between them at any point.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div class="protostrip">
+  <strong>Concept prototype.</strong> An unofficial design concept for Bankwest home loans — not an official Bankwest site. This form submits nothing — don't enter real personal details.
+</div>
+
+<header class="site-header">
+  <div class="wrap nav-shell">
+    <nav class="nav-pill nav-pill--desktop-links" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+        <span class="brand-word">home</span>
+      </a>
+      <a class="nav-link" href="index.html">Home loans</a>
+      <a class="nav-link" href="home-zone.html">Home Zone</a>
+      <a class="nav-link" href="deposit-saver.html">Deposit Saver</a>
+      <button class="nav-icon-btn nav-burger" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+    <div class="nav-pill nav-pill--plain nav-secondary">
+      <a class="nav-link" href="index.html#rates">Rates</a>
+      <a class="nav-link" href="#specialist">Talk to us</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mobile-nav" id="mobile-nav" data-open="false">
+      <a href="index.html">Home loans</a><a href="home-zone.html">Home Zone</a>
+      <a href="deposit-saver.html">Home Deposit Saver</a><a href="boosters.html">Repayment Boosters</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow eyebrow--orange">Two paths, one bank</span>
+      <h1>Apply the way that suits the loan</h1>
+      <p class="lede">
+        A specialist is the right answer for a construction draw-down or three years of
+        business returns. For a salaried refinance on an established home, booking a call
+        is a tax on your Tuesday. Answer four questions and we'll tell you which one you are —
+        honestly, including when the answer is "talk to a person".
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#triage">
+          <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Find my path
+        </a>
+        <a class="btn btn--secondary" href="#specialist">Just book a call</a>
+      </div>
+    </div>
+    <div class="hero-collage">
+      <div class="hero-tile" style="background:var(--brand-secondary)"><strong>~12 min</strong><span>typical online application, with Home Zone pre-fill</span></div>
+      <div class="hero-tile" style="background:var(--c-powder)"><strong>7 days</strong><span>specialists available, including evenings</span></div>
+      <div class="hero-tile" style="background:var(--c-piglet)"><strong>Any time</strong><span>hand over to a human without starting again</span></div>
+      <div class="hero-tile" style="background:var(--brand-primary)"><strong>Same rate</strong><span>whichever path you take — no online-only pricing games</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TRIAGE -->
+<section class="section section--paper" id="triage">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Which path is yours?</h2>
+      <p class="lede">We'd rather send you to a specialist early than have an online application stall three screens in.</p>
+    </div>
+
+    <div class="result-split">
+      <div class="card card--pad-lg">
+        <div class="field">
+          <label class="field-label" for="t-purpose">What are you doing?</label>
+          <select class="select" id="t-purpose">
+            <option value="refi" selected>Refinancing an existing loan</option>
+            <option value="next">Buying my next home</option>
+            <option value="first">Buying my first home</option>
+            <option value="invest">Buying an investment property</option>
+            <option value="build">Building or renovating</option>
+            <option value="bridge">Bridging between two properties</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="t-income">How are you paid?</label>
+          <select class="select" id="t-income">
+            <option value="payg" selected>Salaried, PAYG</option>
+            <option value="payg-var">Salaried with significant bonus or commission</option>
+            <option value="contract">Contractor</option>
+            <option value="self">Self-employed</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="t-property">What's the property?</label>
+          <select class="select" id="t-property">
+            <option value="metro" selected>Established home, metro</option>
+            <option value="regional">Established home, regional</option>
+            <option value="offplan">Off the plan</option>
+            <option value="land">Vacant land or construction</option>
+            <option value="unusual">Rural, commercial-zoned or unusual</option>
+          </select>
+        </div>
+
+        <div class="field mb-0">
+          <label class="field-label" for="t-structure">Who's borrowing?</label>
+          <select class="select" id="t-structure">
+            <option value="individual" selected>Me, or me and a partner</option>
+            <option value="guarantor">With a guarantor</option>
+            <option value="trust">Through a trust or company</option>
+            <option value="smsf">Through an SMSF</option>
+          </select>
+        </div>
+      </div>
+
+      <aside class="result-panel" aria-live="polite">
+        <p class="tiny muted mb-0">Our recommendation</p>
+        <div class="bignum bignum--lime" id="path-title" style="font-size:2.5rem">Apply online</div>
+        <p class="muted small" id="path-why">Everything about this application is standard. The online path will be faster than waiting for a call.</p>
+
+        <hr class="divider">
+        <dl style="margin:0">
+          <div class="stat-row"><dt>Typical time to submit</dt><dd id="path-time">About 12 minutes</dd></div>
+          <div class="stat-row"><dt>Valuation</dt><dd id="path-val">Automated, instant</dd></div>
+          <div class="stat-row"><dt>Signing</dt><dd id="path-sign">Digital</dd></div>
+          <div class="stat-row"><dt>Rate</dt><dd>Identical on both paths</dd></div>
+        </dl>
+
+        <div id="path-flags" style="margin-top:1.5rem"></div>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <a class="btn btn--lime btn--block" id="path-cta" href="#application">Start the online application</a>
+        </div>
+        <p class="tiny muted" style="margin-top:.75rem;margin-bottom:0">
+          You can switch paths at any point and keep everything you've entered.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= APPLICATION -->
+<section class="section" id="application">
+  <div class="wrap" style="max-width:64rem">
+    <div class="section-head" style="margin-bottom:2rem">
+      <span class="eyebrow eyebrow--lime">Online application</span>
+      <h2 id="step-title">Confirm it's you</h2>
+      <p class="lede" id="step-sub">You're already signed in, so this part is a formality.</p>
+    </div>
+
+    <div class="progress-track" aria-hidden="true">
+      <span data-step-dot="0" data-done="true"></span><span data-step-dot="1"></span><span data-step-dot="2"></span>
+      <span data-step-dot="3"></span><span data-step-dot="4"></span><span data-step-dot="5"></span>
+    </div>
+    <p class="small muted" id="step-count">Step 1 of 6</p>
+
+    <!-- STEP 1 -->
+    <div class="card card--pad-lg" data-step="0" style="margin-top:1.5rem">
+      <h4>Confirm it's you</h4>
+      <p class="muted">Signed in as a Bankwest customer since 2019. We already hold your identification, so there's nothing to upload.</p>
+      <div class="ledger" style="margin-top:1.5rem">
+        <div class="ledger-row">
+          <div class="ledger-ico" style="background:var(--brand-secondary)">✓</div>
+          <div><div class="ledger-name">Identity verified</div><div class="ledger-cat">On file since account opening · no re-check needed</div></div>
+          <div class="ledger-amt">Done</div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-ico" style="background:var(--brand-secondary)">✓</div>
+          <div><div class="ledger-name">Contact details current</div><div class="ledger-cat">Confirmed 4 months ago in the app</div></div>
+          <div class="ledger-amt">Done</div>
+        </div>
+        <div class="ledger-row">
+          <div class="ledger-ico" style="background:var(--c-banana)">!</div>
+          <div><div class="ledger-name">Credit check</div><div class="ledger-cat">Runs when you submit, not before. We'll ask first.</div></div>
+          <div class="ledger-amt">Later</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="card card--pad-lg" data-step="1" hidden>
+      <h4>Your numbers</h4>
+      <p class="muted">Pulled from Home Zone. Change anything that's wrong — we'll verify against your accounts either way.</p>
+
+      <div class="grid grid-2" style="margin-top:1.5rem">
+        <div class="field">
+          <label class="field-label" for="a-income">Net monthly income <span class="tag">From Home Zone</span></label>
+          <div class="input-money"><input class="input" type="text" id="a-income" value="8,992"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="a-expenses">Assessed living expenses <span class="tag">From Home Zone</span></label>
+          <div class="input-money"><input class="input" type="text" id="a-expenses" value="3,100"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="a-cc">Credit card limits <span class="tag">From your accounts</span></label>
+          <div class="input-money"><input class="input" type="text" id="a-cc" value="8,000"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="a-debts">Other monthly commitments</label>
+          <div class="input-money"><input class="input" type="text" id="a-debts" value="0"></div>
+        </div>
+      </div>
+
+      <div class="pill-note" style="margin-top:.5rem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Eleven fields filled in for you. Two left to check.
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="card card--pad-lg" data-step="2" hidden>
+      <h4>The property</h4>
+      <p class="muted">Enter an address and we'll value it automatically. Most established metro homes come back instantly.</p>
+
+      <div class="field" style="margin-top:1.5rem">
+        <label class="field-label" for="a-address">Property address</label>
+        <input class="input" type="text" id="a-address" value="14 Sample Street, Subiaco WA 6008">
+      </div>
+
+      <div class="grid grid-2">
+        <div class="field">
+          <label class="field-label" for="a-price">Purchase price or estimated value</label>
+          <div class="input-money"><input class="input" type="text" id="a-price" value="799,000"></div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="a-deposit">Deposit or existing equity</label>
+          <div class="input-money"><input class="input" type="text" id="a-deposit" value="120,000"></div>
+        </div>
+      </div>
+
+      <div class="card card--paper" style="margin-top:.5rem">
+        <div class="stat-row"><dt>Automated valuation</dt><dd id="a-avm">$804,000</dd></div>
+        <div class="stat-row"><dt>Confidence</dt><dd>High — 41 comparable sales</dd></div>
+        <div class="stat-row"><dt>Loan required</dt><dd id="a-loan">$679,000</dd></div>
+        <div class="stat-row" style="border:0"><dt>LVR</dt><dd id="a-lvr">85.0% — LMI applies</dd></div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="card card--pad-lg" data-step="3" hidden>
+      <h4>Your loan</h4>
+      <p class="muted">Pick the product and the extras. You can change any of this before settlement.</p>
+
+      <div class="field" style="margin-top:1.5rem">
+        <label class="field-label">Product</label>
+        <div class="choice-grid">
+          <label class="choice"><input type="radio" name="a-product" value="simple" checked>
+            <span><strong>Bankwest Simple Home Loan — 6.24% p.a. variable</strong><span>Unlimited extra repayments, redraw, and your first 100% offset at $0 a month.</span></span></label>
+          <label class="choice"><input type="radio" name="a-product" value="fixed">
+            <span><strong>Fixed Rate Home Loan — 6.49% p.a. for 1 year</strong><span>Consistent repayments, extra repayments capped at $10,000 a year, 40% offset.</span></span></label>
+          <label class="choice"><input type="radio" name="a-product" value="package">
+            <span><strong>Complete Home Loan Package — $395 a year</strong><span>Up to nine offsets at no monthly fee, fee-free credit card, no progress payment fees.</span></span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Boosters, from day one</label>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" id="a-roundups" checked>
+            <span><strong>Roundups</strong><span>Round card purchases to the nearest $1 and sweep the difference to your offset. About $40 a month.</span></span></label>
+          <label class="choice"><input type="checkbox" id="a-split" checked>
+            <span><strong>Payment Split — $400 a month</strong><span>Taken from each pay as it lands.</span></span></label>
+          <label class="choice"><input type="checkbox" id="a-rk" checked>
+            <span><strong>Rate Keeper</strong><span>Hold your repayment steady when rates fall and offset the difference.</span></span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5 — auto-linking -->
+    <div class="card card--pad-lg" data-step="4" hidden>
+      <h4>Accounts we'll link at settlement</h4>
+      <p class="muted">
+        You already bank with us, so there's no offset account to apply for. We'll open the
+        included one and link the accounts below on settlement day. Untick anything you'd
+        rather keep separate — you can change all of it later in the app.
+      </p>
+
+      <div class="choice-grid" style="margin-top:1.5rem" id="link-list">
+        <label class="choice"><input type="checkbox" class="link-acct" data-amount="18240" checked>
+          <span><strong>Home Deposit Saver — $18,240</strong><span>Converts to your 100% Offset Transaction Account. $0 monthly fee. This is the account your loan draws the deposit from.</span></span></label>
+        <label class="choice"><input type="checkbox" class="link-acct" data-amount="2910" checked>
+          <span><strong>Everyday Account ••4417 — $2,910</strong><span>Linked as the source for Roundups and your repayment debit.</span></span></label>
+        <label class="choice"><input type="checkbox" class="link-acct" data-amount="6500" checked>
+          <span><strong>Hero Saver ••2288 — $6,500</strong><span>Balance sits against the loan instead of earning taxable interest.</span></span></label>
+        <label class="choice"><input type="checkbox" class="link-acct" data-amount="4120">
+          <span><strong>Joint Holiday Fund ••5501 — $4,120</strong><span>Held jointly with someone who isn't on the loan, so this one needs their consent too.</span></span></label>
+      </div>
+
+      <div class="card card--paper" style="margin-top:1.5rem">
+        <div class="stat-row"><dt>Offsetting from settlement day</dt><dd id="link-total">$27,650</dd></div>
+        <div class="stat-row"><dt>Interest that saves you in year one</dt><dd id="link-saving">$1,725</dd></div>
+        <div class="stat-row" style="border:0"><dt>Offset account fee</dt><dd>$0 a month</dd></div>
+      </div>
+
+      <p class="tiny muted" style="margin-top:1rem">
+        Credit interest isn't payable on an offset account. Money in a linked offset stays fully
+        available to you — it reduces the balance we charge interest on, not your loan balance.
+      </p>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="card card--pad-lg" data-step="5" hidden>
+      <h4>Check and submit</h4>
+      <p class="muted">Last look before we run a credit check and send this to assessment.</p>
+      <dl style="margin-top:1.5rem" id="review"></dl>
+
+      <div class="pill-note" style="margin-top:1.5rem">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1a1a1a" stroke-width="2"/><path d="M12 8v5" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#1a1a1a"/></svg>
+        Submitting runs a credit check, which is recorded on your credit file.
+      </div>
+
+      <p class="tiny muted" style="margin-top:1rem">This is a prototype. Nothing is submitted, no credit check is run, and no data leaves this page.</p>
+    </div>
+
+    <!-- DONE -->
+    <div class="card card--pad-lg" data-step="6" hidden style="background:var(--brand-secondary);border-color:transparent">
+      <h3>That's it — application submitted</h3>
+      <p style="color:#1a1a1acc;max-width:52ch">
+        No call to book, no branch to visit. We'll come back with a conditional decision, and a
+        specialist picks it up automatically if anything needs a human eye.
+      </p>
+      <div class="steps" style="margin-top:2rem;max-width:44rem">
+        <div class="step"><div class="step__n" style="background:#1a1a1a;color:#fff"></div><div><h5>Conditional decision</h5><p class="small mb-0" style="color:#1a1a1acc">Usually within a few hours for a straightforward application.</p></div></div>
+        <div class="step"><div class="step__n" style="background:#1a1a1a;color:#fff"></div><div><h5>Documents</h5><p class="small mb-0" style="color:#1a1a1acc">Signed digitally, in the app, in about ten minutes.</p></div></div>
+        <div class="step"><div class="step__n" style="background:#1a1a1a;color:#fff"></div><div><h5>Settlement</h5><p class="small mb-0" style="color:#1a1a1acc">Your offset opens, your accounts link themselves, and your Boosters switch on.</p></div></div>
+      </div>
+      <div class="btn-row" style="margin-top:2rem">
+        <a class="btn btn--primary" href="index.html"><span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Back to home loans</a>
+        <button class="btn btn--secondary" type="button" id="restart">Run through it again</button>
+      </div>
+    </div>
+
+    <div class="btn-row" id="wizard-nav" style="margin-top:1.5rem;justify-content:space-between">
+      <button class="btn btn--secondary" type="button" id="back" disabled>Back</button>
+      <div class="btn-row">
+        <a class="btn btn--secondary" href="#specialist">Hand this to a specialist</a>
+        <button class="btn btn--primary" type="button" id="next">
+          <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span id="next-label">Continue</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= SPECIALIST -->
+<section class="section section--ink" id="specialist">
+  <div class="wrap">
+    <div class="feature-split">
+      <div>
+        <span class="eyebrow">The other path</span>
+        <h2>Hand it to a specialist, keep everything you've typed</h2>
+        <p class="lede" style="margin-top:1.5rem">
+          The online path isn't a downgrade and the specialist path isn't a fallback. They're the
+          same application, the same rate, and the same assessment — one just has a person on it.
+        </p>
+        <ul class="feature-list" style="margin-top:2rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Switch across at any step — nothing is re-keyed</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One dedicated specialist for the whole application</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seven days a week, including evenings</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>We'll move you across ourselves if your application hits something unusual</span></li>
+        </ul>
+        <div class="btn-row"><a class="btn btn--lime" href="#">Request a call</a></div>
+      </div>
+
+      <div class="card card--ink" style="border:1px solid var(--divider-on-inverse)">
+        <h5>When we'd insist on a specialist</h5>
+        <p class="muted small">Not because online can't take the form, but because these go wrong quietly if nobody's watching.</p>
+        <ul class="feature-list" style="margin-top:1.25rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Construction and progress draw-downs</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Bridging finance and peak-debt structuring</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Trust, company and SMSF borrowers</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Guarantor arrangements</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Self-employed with under two years of returns</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v10M12 19h.01" stroke="#ff911e" stroke-width="2.4" stroke-linecap="round"/></svg><span>Rural, commercial-zoned or unusual security</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:56rem">
+    <h3 style="margin-bottom:1.5rem">Things to consider</h3>
+    <p class="small muted">The online application path is available for eligible applicants and property types. Applications involving construction, bridging finance, guarantors, trust, company or SMSF structures, or where a full valuation is required, are referred to a home loan specialist. You can transfer an online application to a specialist at any point without re-entering your details. Automated valuations are indicative and we may require a full valuation. Submitting an application involves a credit check, which is recorded on your credit file. Due to state laws, restrictions apply to digitally signing the Mortgage Form in some states and territories; you'll need a device with internet and email access, and a computer or tablet is recommended. Some exclusions apply. At settlement we open the included Offset Transaction Account and link eligible Bankwest deposit accounts held in the same name as the loan; you'll be shown the accounts to be linked before settlement and can exclude any of them. Lending and eligibility criteria, fees and charges apply. Rates are subject to change.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+    </a>
+    <div class="footer-grid">
+      <div><h6>Company</h6><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      <div><h6>Products</h6><ul><li><a href="index.html">Home loans</a></li><li><a href="deposit-saver.html">Home Deposit Saver</a></li><li><a href="index.html#rates">Rates</a></li></ul></div>
+      <div><h6>Services</h6><ul><li><a href="home-zone.html">Home Zone</a></li><li><a href="boosters.html">Repayment Boosters</a></li><li><a href="apply.html">Apply online</a></li></ul></div>
+      <div><h6>Legal</h6><ul><li><a href="#">Terms and conditions</a></li><li><a href="#">Privacy</a></li><li><a href="#">Forms</a></li></ul></div>
+    </div>
+    <div class="footer-legal">
+      <p>Bankwest acknowledges the Traditional Owners of the lands across Australia as the continuing custodians of Country and Culture. We pay our respect to First Nations peoples and their Elders, past and present.</p>
+      <p><strong>This site is a concept prototype.</strong> It is an unofficial design concept — not an official Bankwest site, and not built or operated by Bankwest or the Commonwealth Bank of Australia. No application is submitted and no data is collected or transmitted. Nothing here is financial advice.</p>
+      <p>Concept prototype · <span id="year">2026</span></p>
+    </div>
+
+    <p class="footer-credit">
+      Built by Akash Sur ·
+      <a href="https://github.com/sur-akash" target="_blank" rel="noopener noreferrer">GitHub<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://www.linkedin.com/in/akash-sur/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://sur-akash.github.io/" target="_blank" rel="noopener noreferrer">Website<span class="arr" aria-hidden="true">↗</span></a> ·
+      data is illustrative
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/apply.js"></script>
+</body>
+</html>

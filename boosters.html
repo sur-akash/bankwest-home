@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repayment Boosters — roundups, splits and Rate Keeper | Bankwest</title>
+<meta name="description" content="Roundups, Payment Splits and Rate Keeper move spare money into your 100% offset automatically. See what they'd take off your loan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div class="protostrip">
+  <strong>Concept prototype.</strong> An unofficial design concept for Bankwest home loans — not an official Bankwest site. Rates and figures are illustrative.
+</div>
+
+<header class="site-header">
+  <div class="wrap nav-shell">
+    <nav class="nav-pill nav-pill--desktop-links" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+        <span class="brand-word">home</span>
+      </a>
+      <a class="nav-link" href="index.html">Home loans</a>
+      <a class="nav-link" href="home-zone.html">Home Zone</a>
+      <a class="nav-link" href="deposit-saver.html">Deposit Saver</a>
+      <button class="nav-icon-btn nav-burger" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+    <div class="nav-pill nav-pill--plain nav-secondary">
+      <a class="nav-link" href="index.html#rates">Rates</a>
+      <a class="nav-link" href="index.html#questions">Support</a>
+      <a class="nav-login" href="apply.html">Log in</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mobile-nav" id="mobile-nav" data-open="false">
+      <a href="index.html">Home loans</a><a href="home-zone.html">Home Zone</a>
+      <a href="deposit-saver.html">Home Deposit Saver</a><a href="apply.html">Apply online</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow eyebrow--lime">Repayment Boosters</span>
+      <h1>Spare change, pointed at your mortgage</h1>
+      <p class="lede">
+        Nobody pays their loan down faster by intending to. Boosters take the small money
+        moving through your everyday account and put it in your offset automatically —
+        every night, without you doing anything.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#simulator">
+          <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Run it on my loan
+        </a>
+        <a class="btn btn--secondary" href="#how">How each one works</a>
+      </div>
+      <p class="tiny muted" style="margin-top:1.25rem">Works with the free 100% offset included on every Simple Home Loan. The money stays yours and stays available.</p>
+    </div>
+
+    <div style="justify-self:center;width:100%;max-width:24rem">
+      <div class="card card--paper card--pad-lg">
+        <div class="phone__bar"><span>Roundups · yesterday</span><span>Nearest $1</span></div>
+        <div class="ledger">
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-banana)">☕</div>
+            <div><div class="ledger-name">Sample Roasters</div><div class="ledger-cat">$4.60 → $5.00</div></div>
+            <div class="ledger-amt credit">+$0.40</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-powder)">🚆</div>
+            <div><div class="ledger-name">Transit fare</div><div class="ledger-cat">$3.35 → $4.00</div></div>
+            <div class="ledger-amt credit">+$0.65</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-forest)">🛒</div>
+            <div><div class="ledger-name">Corner Grocer</div><div class="ledger-cat">$62.15 → $63.00</div></div>
+            <div class="ledger-amt credit">+$0.85</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-piglet)">🥡</div>
+            <div><div class="ledger-name">Noodle Bar</div><div class="ledger-cat">$18.90 → $19.00</div></div>
+            <div class="ledger-amt credit">+$0.10</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-teal)">⛽</div>
+            <div><div class="ledger-name">Fuel stop</div><div class="ledger-cat">$71.28 → $72.00</div></div>
+            <div class="ledger-amt credit">+$0.72</div>
+          </div>
+        </div>
+        <hr class="divider" style="margin:1rem 0">
+        <div class="stat-row" style="border:0;padding:0"><dt>Swept to your offset overnight</dt><dd>$2.72</dd></div>
+        <p class="tiny muted" style="margin-top:.75rem;margin-bottom:0">About $40 a month at your current spending. Small — until you see what thirty years of it does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== SIMULATOR -->
+<section class="section section--paper" id="simulator">
+  <div class="wrap">
+    <div class="section-head" id="repayments">
+      <h2>What Boosters would do to your loan</h2>
+      <p class="lede">Set your loan up on the left, switch the boosters on, and watch the payoff date move. Nothing here reduces your minimum repayment — it just stops the bank charging you interest on money you already have.</p>
+    </div>
+
+    <div class="result-split">
+      <div>
+        <div class="card" style="margin-bottom:1.5rem">
+          <h5>Your loan</h5>
+
+          <div class="field" style="margin-top:1.25rem">
+            <div class="range-head">
+              <label class="field-label mb-0" for="loan">Loan amount</label>
+              <span class="range-value tnum" id="loan-out">$680,000</span>
+            </div>
+            <input class="range" type="range" id="loan" min="100000" max="2000000" step="10000" value="680000">
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="rate">Variable rate</label>
+              <span class="range-value tnum" id="rate-out">6.24%</span>
+            </div>
+            <input class="range" type="range" id="rate" min="3" max="10" step="0.01" value="6.24">
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field mb-0">
+              <label class="field-label" for="term">Term</label>
+              <select class="select" id="term">
+                <option value="30" selected>30 years</option>
+                <option value="25">25 years</option>
+                <option value="20">20 years</option>
+              </select>
+            </div>
+            <div class="field mb-0">
+              <label class="field-label" for="offset-start">Already in your offset</label>
+              <div class="input-money"><input class="input" type="text" id="offset-start" value="18,240" inputmode="numeric"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5>Boosters</h5>
+          <p class="muted small">Every one of these moves your money into your own offset. None of it is a fee, and none of it is locked away.</p>
+
+          <div class="field" style="margin-top:1.5rem">
+            <label class="field-label" for="roundups">Roundups</label>
+            <select class="select" id="roundups">
+              <option value="0">Off</option>
+              <option value="40" selected>Round to the nearest $1 — about $40 a month</option>
+              <option value="187">Round to the nearest $5 — about $187 a month</option>
+            </select>
+            <p class="field-hint">Estimated from your card transactions. Swept to the offset overnight.</p>
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="split">Payment Split, from every pay</label>
+              <span class="range-value tnum" id="split-out">$400/mo</span>
+            </div>
+            <input class="range" type="range" id="split" min="0" max="2000" step="25" value="400">
+            <p class="field-hint">Taken the moment your pay lands, before it turns into something else.</p>
+          </div>
+
+          <label class="switch" style="margin-bottom:1.25rem">
+            <input type="checkbox" id="ratekeeper" checked><span class="track"></span>
+            <span><strong>Rate Keeper</strong><br><span class="tiny muted">When your rate falls, hold the repayment where it was and send the difference to the offset.</span></span>
+          </label>
+
+          <div class="field mb-0" id="rk-field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="rk-cut">Rate fall to assume, over the next 2 years</label>
+              <span class="range-value tnum" id="rk-cut-out">0.50%</span>
+            </div>
+            <input class="range" type="range" id="rk-cut" min="0" max="2" step="0.25" value="0.5">
+            <p class="field-hint">Applied in equal steps at months 12 and 24. A guess, clearly — but it shows what the habit is worth.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="result-panel" aria-live="polite">
+        <p class="tiny muted mb-0">Interest you don't pay</p>
+        <div class="bignum bignum--lime" id="b-saved">$228,109</div>
+        <p class="tiny muted" id="b-time">Loan clears 4 years 6 months early</p>
+
+        <div class="meter" style="margin:1.25rem 0 .5rem"><span id="b-meter" style="width:31%"></span></div>
+        <p class="tiny muted" id="b-meter-note">31% of your interest bill removed</p>
+
+        <hr class="divider">
+        <dl style="margin:0">
+          <div class="stat-row"><dt>Minimum repayment</dt><dd id="b-repay">$4,182 / mo</dd></div>
+          <div class="stat-row"><dt>Boosters add, per month</dt><dd id="b-flow">$658 once Rate Keeper is running</dd></div>
+          <div class="stat-row"><dt>Interest without Boosters</dt><dd id="b-int-base">$733,525</dd></div>
+          <div class="stat-row"><dt>Interest with Boosters</dt><dd id="b-int-boost">$505,416</dd></div>
+          <div class="stat-row"><dt>Paid off</dt><dd id="b-payoff">Apr 2050</dd></div>
+          <div class="stat-row"><dt>In your offset by then</dt><dd id="b-offset-end">$201,323</dd></div>
+        </dl>
+
+        <hr class="divider">
+        <p class="tiny muted" style="margin-bottom:0">
+          Everything in the offset is still your money. Pull it out for a car or a wedding and the
+          loan simply goes back to costing what it would have. That's the difference between an
+          offset and an extra repayment.
+        </p>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <a class="btn btn--lime btn--block" href="apply.html?from=boosters">Get the loan and turn these on</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="card card--pad-lg" style="margin-top:2rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
+        <h4 class="mb-0">Loan balance, both ways</h4>
+        <span class="pill-note tiny" id="chart-note">Boosted against untouched</span>
+      </div>
+      <div style="overflow-x:auto">
+        <svg class="chart" id="boost-chart" viewBox="0 0 720 300" role="img" aria-labelledby="bchart-title">
+          <title id="bchart-title">Loan balance over time, with and without Repayment Boosters</title>
+        </svg>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#9eb5be"></i>Without Boosters</span>
+        <span><i style="background:#7fbf1f"></i>With Boosters</span>
+        <span><i style="background:#ff911e"></i>Your offset balance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head"><h2>Three habits, none of which you have to remember</h2></div>
+
+    <div class="grid grid-3">
+      <article class="card card--paper card--pad-lg">
+        <div class="icon-badge" style="background:var(--brand-secondary)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16M4 12h16" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Roundups</h4>
+        <p class="muted">Every card purchase rounds up to the next dollar, or the next $5 if you want it to bite. The difference sweeps to your offset overnight in one transfer, so your statement doesn't fill up with cents.</p>
+        <ul class="feature-list" style="margin-top:1rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Skips the sweep if your account would go under</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pause it for a month without switching it off</span></li>
+        </ul>
+      </article>
+
+      <article class="card card--paper card--pad-lg">
+        <div class="icon-badge" style="background:var(--brand-primary)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h6l4 10h6M14 7h6" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Payment Splits</h4>
+        <p class="muted">Set a percentage or a flat amount and we carve it off the moment your pay arrives. Money you never see in your spending balance is money you don't have to have discipline about.</p>
+        <ul class="feature-list" style="margin-top:1rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Follows your pay cycle, whatever it is</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Split across several offsets if you hold more than one</span></li>
+        </ul>
+      </article>
+
+      <article class="card card--paper card--pad-lg">
+        <div class="icon-badge" style="background:var(--c-piglet)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18V9m5 9V5m5 13v-6m5 6V8" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Rate Keeper</h4>
+        <p class="muted">Rate cuts usually vanish into a slightly smaller direct debit and you never notice the money. Rate Keeper holds your repayment where it was and sends the difference to the offset instead.</p>
+        <ul class="feature-list" style="margin-top:1rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>We tell you before it starts, every time</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>One tap to take the cut in cash instead</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== OFFSET 101 -->
+<section class="section section--ink">
+  <div class="wrap">
+    <div class="feature-split">
+      <div>
+        <span class="eyebrow eyebrow--lime">Why the offset, not extra repayments</span>
+        <h2>Same interest saved. Very different flexibility.</h2>
+        <p class="lede" style="margin-top:1.5rem">
+          A dollar in a 100% offset reduces the balance you're charged interest on by exactly
+          one dollar — identical to paying it off the loan. The difference is what happens when
+          you need it back. Redraw is a request. Your offset is a debit card.
+        </p>
+        <p class="muted">
+          That's the whole reason a monthly fee on an offset account was worth arguing about,
+          and the whole reason your first one is now free.
+        </p>
+        <div class="btn-row"><a class="btn btn--lime" href="index.html#offsets">See the offset pricing</a></div>
+      </div>
+      <div class="table-scroll">
+        <table class="cmp">
+          <caption class="sr-only">Offset compared with extra repayments</caption>
+          <thead><tr><th scope="col"></th><th scope="col">100% Offset</th><th scope="col">Extra repayments</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Interest saved</th><td class="is-good">Same</td><td class="is-good">Same</td></tr>
+            <tr><th scope="row">Getting it back</th><td class="is-good">Instant — it's a transaction account</td><td>Redraw request, subject to conditions</td></tr>
+            <tr><th scope="row">On a fixed rate</th><td>40% offset only</td><td>Capped at $10,000 a year</td></tr>
+            <tr><th scope="row">Monthly fee</th><td class="is-good">$0 on your first offset</td><td class="is-good">$0</td></tr>
+            <tr><th scope="row">Reduces your loan balance</th><td>No — it offsets it</td><td class="is-good">Yes</td></tr>
+            <tr><th scope="row">Earns interest</th><td>No credit interest payable</td><td>N/A</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="section-head"><h2>Common questions</h2></div>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="b1">Does this change my minimum repayment?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="b1" hidden><p>No. Your contracted repayment stays exactly the same. Because the offset lowers the balance interest is charged on, more of each repayment goes to principal — which is why the loan clears earlier without you paying more into it.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="b2">What if my account is low when a sweep is due?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="b2" hidden><p>We skip it. Boosters never overdraw you, never trigger a dishonour, and never cost you a fee. The missed sweep isn't caught up later either — it's just skipped.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="b3">Can I turn them off?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="b3" hidden><p>Any time, in the app, without talking to anyone. You can also pause a booster for a set number of weeks if you've got a big month coming and want it back on afterwards.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="b4">Do Boosters work on a fixed rate loan?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="b4" hidden><p>They do, into the 40% offset available on a fixed loan — so the effect is smaller, and it stops once the offset covers 40% of the balance. Rate Keeper does nothing while you're fixed, for obvious reasons, and switches itself on when you roll to variable.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="b5">Is money in the offset earning interest?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="b5" hidden><p>No — credit interest isn't payable on an Offset Transaction Account. It saves you interest at your home loan rate instead, which is higher than any savings rate we'd pay you, and isn't taxed as income the way savings interest is.</p></div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin-top:3rem">
+    <p class="small muted">Roundups, Payment Splits and Rate Keeper move your own money between your own accounts. Funds moved to an Offset Transaction Account reduce the balance interest is charged on but do not reduce your loan balance or your minimum repayment, and remain available to you. Transfers are skipped where the source account has insufficient funds. Boosters can be paused or switched off at any time in the app. Projections on this page assume the rate, repayment and booster amounts you enter continue unchanged for the life of the loan, that all sweeps succeed, and that no redraws or withdrawals are made from the offset — real outcomes will differ. Credit interest is not payable on an Offset Transaction Account. Lending criteria, fees and charges apply.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+    </a>
+    <div class="footer-grid">
+      <div><h6>Company</h6><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      <div><h6>Products</h6><ul><li><a href="index.html">Home loans</a></li><li><a href="deposit-saver.html">Home Deposit Saver</a></li><li><a href="index.html#rates">Rates</a></li></ul></div>
+      <div><h6>Services</h6><ul><li><a href="home-zone.html">Home Zone</a></li><li><a href="boosters.html">Repayment Boosters</a></li><li><a href="apply.html">Apply online</a></li></ul></div>
+      <div><h6>Legal</h6><ul><li><a href="#">Terms and conditions</a></li><li><a href="#">Privacy</a></li><li><a href="#">Forms</a></li></ul></div>
+    </div>
+    <div class="footer-legal">
+      <p>Bankwest acknowledges the Traditional Owners of the lands across Australia as the continuing custodians of Country and Culture. We pay our respect to First Nations peoples and their Elders, past and present.</p>
+      <p><strong>This site is a concept prototype.</strong> It is an unofficial design concept — not an official Bankwest site, and not built or operated by Bankwest or the Commonwealth Bank of Australia. All rates, fees and projections are illustrative. Nothing here is financial advice.</p>
+      <p>Concept prototype · <span id="year">2026</span></p>
+    </div>
+
+    <p class="footer-credit">
+      Built by Akash Sur ·
+      <a href="https://github.com/sur-akash" target="_blank" rel="noopener noreferrer">GitHub<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://www.linkedin.com/in/akash-sur/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://sur-akash.github.io/" target="_blank" rel="noopener noreferrer">Website<span class="arr" aria-hidden="true">↗</span></a> ·
+      data is illustrative
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/boosters.js"></script>
+</body>
+</html>

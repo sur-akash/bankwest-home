@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Zone — borrowing power from your real spending | Bankwest</title>
+<meta name="description" content="Home Zone reads twelve months of your Bankwest transactions and turns them into a borrowing estimate you can act on. No expense forms, no guessing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div class="protostrip">
+  <strong>Concept prototype.</strong> An unofficial design concept for Bankwest home loans — not an official Bankwest site. The account data below is fictional sample data.
+</div>
+
+<header class="site-header">
+  <div class="wrap nav-shell">
+    <nav class="nav-pill nav-pill--desktop-links" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+        <span class="brand-word">home</span>
+      </a>
+      <div class="nav-item-wrap">
+        <button class="nav-link" data-nav-toggle aria-expanded="false" aria-controls="menu-borrow">Borrow
+          <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-menu" id="menu-borrow" data-open="false">
+          <a href="index.html">Home loans</a>
+          <a href="home-zone.html">Home Zone</a>
+          <a href="boosters.html">Repayment Boosters</a>
+          <a href="apply.html">Apply online</a>
+        </div>
+      </div>
+      <a class="nav-link" href="deposit-saver.html">Deposit Saver</a>
+      <a class="nav-link" href="boosters.html">Boosters</a>
+      <button class="nav-icon-btn nav-burger" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+    <div class="nav-pill nav-pill--plain nav-secondary">
+      <a class="nav-link" href="index.html#rates">Rates</a>
+      <a class="nav-link" href="index.html#questions">Support</a>
+      <a class="nav-login" href="apply.html">Log in</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mobile-nav" id="mobile-nav" data-open="false">
+      <a href="index.html">Home loans</a><a href="deposit-saver.html">Home Deposit Saver</a>
+      <a href="boosters.html">Repayment Boosters</a><a href="apply.html">Apply online</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================= HERO -->
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow eyebrow--lime">Home Zone</span>
+      <h1>Stop typing in your own expenses</h1>
+      <p class="lede">
+        We can already see what you spend. Home Zone reads twelve months of it,
+        works out what an assessor would actually count, and hands you a borrowing
+        estimate — before you've found a property, and without a single form.
+      </p>
+      <div class="btn-row">
+        <button class="btn btn--primary" id="scan-btn" type="button">
+          <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Read my accounts
+        </button>
+        <a class="btn btn--secondary" href="#how">How it works</a>
+      </div>
+      <p class="tiny muted" style="margin-top:1.25rem">
+        Sample data for Alex Nguyen · Everyday Account ••4417, Hero Saver ••2288, Breeze Mastercard ••9034
+      </p>
+    </div>
+
+    <div style="justify-self:center;width:100%;max-width:26rem">
+      <div class="card card--paper card--pad-lg" id="scan-card">
+        <div class="phone__bar"><span>Bankwest App</span><span id="scan-status">Ready</span></div>
+        <h5>Accounts we'll read</h5>
+        <div class="ledger" style="margin-top:.5rem">
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-powder)">E</div>
+            <div><div class="ledger-name">Everyday Account ••4417</div><div class="ledger-cat" data-scanline="0">412 transactions · 12 months</div></div>
+            <div class="ledger-amt" data-scantick="0">·</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-banana)">H</div>
+            <div><div class="ledger-name">Hero Saver ••2288</div><div class="ledger-cat" data-scanline="1">38 transactions · 12 months</div></div>
+            <div class="ledger-amt" data-scantick="1">·</div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-ico" style="background:var(--c-piglet)">B</div>
+            <div><div class="ledger-name">Breeze Mastercard ••9034</div><div class="ledger-cat" data-scanline="2">287 transactions · 12 months</div></div>
+            <div class="ledger-amt" data-scantick="2">·</div>
+          </div>
+        </div>
+        <div class="meter" style="margin-top:1.25rem"><span id="scan-meter" style="width:0%"></span></div>
+        <p class="tiny muted" style="margin-top:.75rem" id="scan-note">
+          Nothing leaves your accounts and no credit check is run. This is an estimate, not an application.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================== WORKSPACE -->
+<section class="section section--paper" id="zone" hidden>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow eyebrow--orange">Your Zone · read <span id="read-date">today</span></span>
+      <h2>Here's what we found</h2>
+      <p class="lede">Everything below came out of your transactions. Adjust the things we can't see from your accounts, and watch the number move.</p>
+    </div>
+
+    <div class="result-split">
+      <!-- ---------------------------------------------------- controls -->
+      <div>
+        <div class="card" style="margin-bottom:1.5rem">
+          <h5>Income we can see</h5>
+          <p class="muted small">Regular credits identified as salary, averaged over twelve months and net of tax.</p>
+          <div class="ledger" style="margin-top:1rem">
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--brand-secondary)">S</div>
+              <div><div class="ledger-name">Salary — MERIDIAN HEALTH P/L</div><div class="ledger-cat">Fortnightly · 26 credits · consistent</div></div>
+              <div class="ledger-amt credit">$8,940</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-teal)">I</div>
+              <div><div class="ledger-name">Interest — Hero Saver</div><div class="ledger-cat">Monthly · shaded to 80%</div></div>
+              <div class="ledger-amt credit">$52</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-lavender)">R</div>
+              <div><div class="ledger-name">Rental income</div><div class="ledger-cat">Not detected</div></div>
+              <div class="ledger-amt muted">$0</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-chocolate);color:#fff">B</div>
+              <div><div class="ledger-name">Bonus — Mar 2026</div><div class="ledger-cat">One-off · shaded to 0%, not annualised</div></div>
+              <div class="ledger-amt muted" style="text-decoration:line-through">$6,400</div>
+            </div>
+          </div>
+          <hr class="divider" style="margin:1rem 0 .75rem">
+          <div class="stat-row" style="border:0;padding:0"><dt>Net monthly income used</dt><dd id="income-total">$8,992</dd></div>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap">
+            <h5 class="mb-0">Spending we can see</h5>
+            <span class="pill-note tiny">Monthly average</span>
+          </div>
+          <p class="muted small" style="margin-top:.5rem">
+            One-offs are stripped out. Untick anything you're genuinely stopping when you buy — we'll only
+            count it if it takes you above the benchmark floor.
+          </p>
+          <div class="ledger" id="spend-ledger" style="margin-top:1rem"></div>
+          <hr class="divider" style="margin:1rem 0 .75rem">
+          <div class="stat-row"><dt>Observed, after your adjustments</dt><dd id="spend-observed">$3,100</dd></div>
+          <div class="stat-row"><dt>Benchmark floor for your household</dt><dd id="spend-hem">$2,450</dd></div>
+          <div class="stat-row" style="border:0"><dt><strong>Assessed living expenses</strong></dt><dd id="spend-assessed">$3,100</dd></div>
+          <p class="tiny muted" id="hem-note" style="margin-top:.75rem"></p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem">
+          <h5>Excluded as one-offs</h5>
+          <p class="muted small">Twelve months of data is long enough to tell a holiday from a habit.</p>
+          <div class="ledger" style="margin-top:1rem">
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-teal)">✈</div>
+              <div><div class="ledger-name">Flights — Bali, Jul 2025</div><div class="ledger-cat">Single occurrence</div></div>
+              <div class="ledger-amt muted" style="text-decoration:line-through">$2,140</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-powder)">⌂</div>
+              <div><div class="ledger-name">Bond &amp; removalist</div><div class="ledger-cat">Single occurrence</div></div>
+              <div class="ledger-amt muted" style="text-decoration:line-through">$1,860</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-piglet)">+</div>
+              <div><div class="ledger-name">Medical excess</div><div class="ledger-cat">Single occurrence</div></div>
+              <div class="ledger-amt muted" style="text-decoration:line-through">$800</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5>Things we can't see from your accounts</h5>
+          <p class="muted small">These change the assessment, so we have to ask.</p>
+
+          <div class="grid grid-2" style="margin-top:1.5rem">
+            <div class="field">
+              <label class="field-label" for="household">Household</label>
+              <select class="select" id="household">
+                <option value="single" selected>Single applicant</option>
+                <option value="couple">Two applicants</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="dependants">Dependants</label>
+              <select class="select" id="dependants">
+                <option value="0" selected>None</option>
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field" id="partner-field" hidden>
+            <div class="range-head">
+              <label class="field-label mb-0" for="partner-income">Second applicant's net monthly income</label>
+              <span class="range-value tnum" id="partner-income-out">$0</span>
+            </div>
+            <input class="range" type="range" id="partner-income" min="0" max="15000" step="100" value="0">
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="cc-limit">Total credit card limits</label>
+              <span class="range-value tnum" id="cc-limit-out">$8,000</span>
+            </div>
+            <input class="range" type="range" id="cc-limit" min="0" max="40000" step="500" value="8000">
+            <p class="field-hint">Assessed at 3.8% of the limit each month, whether or not you owe anything on it. Closing an unused card is the fastest lever here.</p>
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="other-debt">Other loan repayments, monthly</label>
+              <span class="range-value tnum" id="other-debt-out">$0</span>
+            </div>
+            <input class="range" type="range" id="other-debt" min="0" max="3000" step="50" value="0">
+            <p class="field-hint">Car loans, personal loans, buy-now-pay-later commitments.</p>
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="hecs">HELP / HECS repayment, monthly</label>
+              <span class="range-value tnum" id="hecs-out">$0</span>
+            </div>
+            <input class="range" type="range" id="hecs" min="0" max="1500" step="25" value="0">
+          </div>
+
+          <hr class="divider">
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label class="field-label" for="purpose">Purpose</label>
+              <select class="select" id="purpose">
+                <option value="live" selected>To live in — 6.24% p.a.</option>
+                <option value="invest">To invest — 6.49% p.a.</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="term">Loan term</label>
+              <select class="select" id="term">
+                <option value="30" selected>30 years</option>
+                <option value="25">25 years</option>
+                <option value="20">20 years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field mb-0">
+            <label class="field-label" for="deposit">Deposit you'll have</label>
+            <div class="input-money"><input class="input" type="text" id="deposit" value="120,000" inputmode="numeric"></div>
+            <p class="field-hint">Used to work out the property price your borrowing power actually reaches.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ------------------------------------------------------ result -->
+      <aside class="result-panel" aria-live="polite">
+        <p class="tiny muted mb-0">Estimated borrowing power</p>
+        <div class="bignum bignum--lime" id="bp-main">$679,000</div>
+        <p class="tiny muted" id="bp-range">Range $642,000 – $717,000</p>
+
+        <div class="meter" style="margin:1.25rem 0 .5rem"><span id="bp-meter" style="width:62%"></span></div>
+        <p class="tiny muted" id="bp-assess">Assessed at 9.24% p.a. — the 6.24% product rate plus a 3.00% buffer</p>
+
+        <hr class="divider">
+
+        <p class="tiny muted mb-0">Where your monthly income goes in the assessment</p>
+        <svg class="chart" id="alloc-chart" viewBox="0 0 320 46" role="img" aria-label="Income allocation"></svg>
+        <div class="chart-legend">
+          <span><i style="background:#9eb5be"></i>Living expenses</span>
+          <span><i style="background:#ff911e"></i>Other commitments</span>
+          <span><i style="background:#b1ef42"></i>Available for repayments</span>
+        </div>
+
+        <hr class="divider">
+
+        <dl style="margin:0">
+          <div class="stat-row"><dt>Net monthly income</dt><dd id="r-income">$8,992</dd></div>
+          <div class="stat-row"><dt>Assessed living expenses</dt><dd id="r-expenses">−$3,100</dd></div>
+          <div class="stat-row"><dt>Credit card &amp; other commitments</dt><dd id="r-commit">−$304</dd></div>
+          <div class="stat-row"><dt>Available for repayments</dt><dd id="r-surplus">$5,588</dd></div>
+        </dl>
+
+        <hr class="divider">
+
+        <dl style="margin:0">
+          <div class="stat-row"><dt>Property price you reach</dt><dd id="r-price">$799,000</dd></div>
+          <div class="stat-row"><dt>Deposit</dt><dd id="r-deposit">$120,000</dd></div>
+          <div class="stat-row"><dt>LVR</dt><dd id="r-lvr">85.0%</dd></div>
+          <div class="stat-row"><dt>LMI, estimated</dt><dd id="r-lmi">$6,798</dd></div>
+          <div class="stat-row"><dt>Actual repayment at 6.24%</dt><dd id="r-repay">$4,182 / mo</dd></div>
+        </dl>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <a class="btn btn--lime btn--block" href="apply.html?from=home-zone">Carry this into an application</a>
+        </div>
+        <p class="tiny muted" style="margin-top:.75rem;margin-bottom:0">
+          Your Zone saves automatically. Add a property whenever you find one — nothing gets re-keyed.
+        </p>
+      </aside>
+    </div>
+
+    <!-- --------------------------------------------------- what moves it -->
+    <div class="card card--ink card--pad-lg" style="margin-top:2rem">
+      <h4>What would actually move this number</h4>
+      <p class="muted">Ranked by effect, using your figures — not generic advice.</p>
+      <div class="grid grid-3" id="levers" style="margin-top:1.5rem"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How Home Zone builds the number</h2>
+      <p class="lede">A borrowing power calculator asks you to estimate your own spending, then believes you. An assessor won't. Home Zone does what the assessor does.</p>
+    </div>
+
+    <div class="steps" style="max-width:52rem">
+      <div class="step"><div class="step__n"></div><div>
+        <h5>Find the income that's really recurring</h5>
+        <p class="muted small mb-0">Salary credits are matched by employer and frequency. Bonuses and one-off deposits are shaded out. Savings interest is counted at 80%, the way it would be in an assessment.</p>
+      </div></div>
+      <div class="step"><div class="step__n"></div><div>
+        <h5>Separate habits from events</h5>
+        <p class="muted small mb-0">Twelve months is long enough to see that the flights were a holiday and the groceries are a life. Single-occurrence spend is excluded and shown to you, so you can put it back if we got it wrong.</p>
+      </div></div>
+      <div class="step"><div class="step__n"></div><div>
+        <h5>Apply the benchmark floor</h5>
+        <p class="muted small mb-0">We assess at the higher of what you actually spend and the household expenditure benchmark for your circumstances. If you're already at the floor, cutting your spending won't lift your estimate — and we'll say so rather than let you chase it.</p>
+      </div></div>
+      <div class="step"><div class="step__n"></div><div>
+        <h5>Assess at a buffered rate</h5>
+        <p class="muted small mb-0">Your surplus is tested against repayments at 3.00% above the product rate, so the estimate holds up if rates move. That buffer is why the number is lower than a repayment calculator would suggest — and why it's worth something.</p>
+      </div></div>
+      <div class="step"><div class="step__n"></div><div>
+        <h5>Keep it, and reuse it</h5>
+        <p class="muted small mb-0">Your Zone stays live. Come back when you've found a property, add the address, and the application starts already filled in.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ PRIVACY -->
+<section class="section section--paper">
+  <div class="wrap">
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="icon-badge" style="background:var(--brand-secondary)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 8 7 9 4-1 7-4.5 7-9V6l-7-3Z" stroke="#1a1a1a" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h5>No credit check</h5>
+        <p class="muted small mb-0">A Zone estimate leaves no mark on your credit file. Nothing is reported, and you can look as often as you like.</p>
+      </article>
+      <article class="card">
+        <div class="icon-badge" style="background:var(--c-powder)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2.5" stroke="#1a1a1a" stroke-width="1.8"/><path d="M8 10V7.5a4 4 0 1 1 8 0V10" stroke="#1a1a1a" stroke-width="1.8"/></svg>
+        </div>
+        <h5>Your own data, nothing new</h5>
+        <p class="muted small mb-0">Home Zone reads accounts you already hold with us. It doesn't pull in outside accounts unless you connect them yourself.</p>
+      </article>
+      <article class="card">
+        <div class="icon-badge" style="background:var(--c-piglet)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6h12v12H6z" stroke="#1a1a1a" stroke-width="1.8"/><path d="m9 12 2 2 4-4" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h5>An estimate, and we say so</h5>
+        <p class="muted small mb-0">This isn't pre-approval or an offer of credit. It's the same arithmetic an assessor runs, on data we already hold — which is why it tends to land close.</p>
+      </article>
+    </div>
+
+    <div class="card card--pad-lg" style="margin-top:2rem;background:var(--brand-secondary);border-color:transparent">
+      <div class="feature-split">
+        <div>
+          <h4>Not loan-ready yet?</h4>
+          <p style="color:#1a1a1acc;margin-bottom:0">If the number isn't there, the deposit is usually the reason. Home Deposit Saver tells you the month it will be.</p>
+        </div>
+        <div class="btn-row" style="justify-content:flex-end">
+          <a class="btn btn--primary" href="deposit-saver.html"><span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Start my Saver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap" style="max-width:56rem">
+    <h3 style="margin-bottom:1.5rem">Things to consider</h3>
+    <p class="small muted">A Home Zone estimate is an indication of what we might be able to lend, generated from transaction data on your Bankwest accounts over the preceding 12 months. It isn't an offer of credit, a pre-approval or a conditional approval, and it's produced without validation or full assessment of your circumstances. Serviceability is assessed at a buffered rate above the product rate in line with responsible lending obligations. Income and expenses held at other institutions won't be visible to us unless you share them. Household expenditure benchmarks, credit card assessment rates and LMI premiums shown here are illustrative. Lending criteria, fees and charges apply. Rates are subject to change.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+    </a>
+    <div class="footer-grid">
+      <div><h6>Company</h6><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      <div><h6>Products</h6><ul><li><a href="index.html">Home loans</a></li><li><a href="deposit-saver.html">Home Deposit Saver</a></li><li><a href="#">Savings accounts</a></li><li><a href="index.html#rates">Rates</a></li></ul></div>
+      <div><h6>Services</h6><ul><li><a href="home-zone.html">Home Zone</a></li><li><a href="boosters.html">Repayment Boosters</a></li><li><a href="apply.html">Apply online</a></li></ul></div>
+      <div><h6>Legal</h6><ul><li><a href="#">Terms and conditions</a></li><li><a href="#">Privacy</a></li><li><a href="#">Forms</a></li></ul></div>
+    </div>
+    <div class="footer-legal">
+      <p>Bankwest acknowledges the Traditional Owners of the lands across Australia as the continuing custodians of Country and Culture. We pay our respect to First Nations peoples and their Elders, past and present.</p>
+      <p><strong>This site is a concept prototype.</strong> It is an unofficial design concept — not an official Bankwest site, and not built or operated by Bankwest or the Commonwealth Bank of Australia. All account data, rates, fees and projections are fictional or illustrative. Nothing here is financial advice.</p>
+      <p>Concept prototype · <span id="year">2026</span></p>
+    </div>
+
+    <p class="footer-credit">
+      Built by Akash Sur ·
+      <a href="https://github.com/sur-akash" target="_blank" rel="noopener noreferrer">GitHub<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://www.linkedin.com/in/akash-sur/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://sur-akash.github.io/" target="_blank" rel="noopener noreferrer">Website<span class="arr" aria-hidden="true">↗</span></a> ·
+      data is illustrative
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/home-zone.js"></script>
+</body>
+</html>

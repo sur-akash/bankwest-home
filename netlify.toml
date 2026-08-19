@@ -1,0 +1,38 @@
+[build]
+  # Static site — nothing to compile. Netlify serves this directory as-is.
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Pretty URLs: /home-zone -> /home-zone.html
+[[redirects]]
+  from = "/home-zone"
+  to = "/home-zone.html"
+  status = 200
+
+[[redirects]]
+  from = "/deposit-saver"
+  to = "/deposit-saver.html"
+  status = 200
+
+[[redirects]]
+  from = "/boosters"
+  to = "/boosters.html"
+  status = 200
+
+[[redirects]]
+  from = "/apply"
+  to = "/apply.html"
+  status = 200

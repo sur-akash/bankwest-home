@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Deposit Saver — a savings account with a date on it | Bankwest</title>
+<meta name="description" content="Home Deposit Saver works out everything you need upfront — deposit, stamp duty, LMI, legals — and projects the month you'll have it. Converts to a free 100% offset when your loan settles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div class="protostrip">
+  <strong>Concept prototype.</strong> An unofficial design concept for Bankwest home loans — not an official Bankwest site. Rates, duty and LMI figures are illustrative.
+</div>
+
+<header class="site-header">
+  <div class="wrap nav-shell">
+    <nav class="nav-pill nav-pill--desktop-links" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+        <span class="brand-word">home</span>
+      </a>
+      <a class="nav-link" href="index.html">Home loans</a>
+      <a class="nav-link" href="home-zone.html">Home Zone</a>
+      <a class="nav-link" href="boosters.html">Boosters</a>
+      <button class="nav-icon-btn nav-burger" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+    <div class="nav-pill nav-pill--plain nav-secondary">
+      <a class="nav-link" href="index.html#rates">Rates</a>
+      <a class="nav-link" href="index.html#questions">Support</a>
+      <a class="nav-login" href="apply.html">Log in</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mobile-nav" id="mobile-nav" data-open="false">
+      <a href="index.html">Home loans</a><a href="home-zone.html">Home Zone</a>
+      <a href="boosters.html">Repayment Boosters</a><a href="apply.html">Apply online</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow eyebrow--orange">Home Deposit Saver</span>
+      <h1>A savings account that knows what it's for</h1>
+      <p class="lede">
+        Most people saving for a house are saving toward a number they've never actually
+        worked out. Set the sort of place you're after and we'll do the arithmetic —
+        deposit, stamp duty, LMI, legals — then show you the month you get there.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#projection">
+          <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          See my date
+        </a>
+        <a class="btn btn--secondary" href="#settlement">What happens when I buy</a>
+      </div>
+      <p class="tiny muted" style="margin-top:1.25rem">4.85% p.a. variable · no monthly fee · no lock-in · becomes your free 100% offset at settlement</p>
+    </div>
+
+    <div class="hero-collage">
+      <div class="hero-tile" style="background:var(--brand-primary)">
+        <strong>4.85%</strong><span>p.a. variable while you're saving</span>
+      </div>
+      <div class="hero-tile" style="background:var(--c-piglet)">
+        <strong>Net of costs</strong><span>we track your deposit after duty and fees, not before</span>
+      </div>
+      <div class="hero-tile" style="background:var(--c-powder)">
+        <strong>One tap</strong><span>becomes a 100% offset the day your loan settles</span>
+      </div>
+      <div class="hero-tile" style="background:var(--brand-secondary)">
+        <strong>$0</strong><span>monthly fee, and no minimum balance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================= PROJECTION -->
+<section class="section section--paper" id="projection">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>When you'll be ready</h2>
+      <p class="lede">Change anything below. The date moves with it.</p>
+    </div>
+
+    <div class="result-split">
+      <!-- controls -->
+      <div>
+        <div class="card" style="margin-bottom:1.5rem">
+          <h5>The place you're after</h5>
+
+          <div class="field" style="margin-top:1.25rem">
+            <div class="range-head">
+              <label class="field-label mb-0" for="price">Property price</label>
+              <span class="range-value tnum" id="price-out">$820,000</span>
+            </div>
+            <input class="range" type="range" id="price" min="300000" max="2500000" step="10000" value="820000">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="deposit-pct">Deposit you're aiming for</label>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="deposit-pct" value="0.20" checked>
+                <span><strong>20% — no LMI</strong><span>The clean line. Costs more time, saves you the insurance premium.</span></span></label>
+              <label class="choice"><input type="radio" name="deposit-pct" value="0.15">
+                <span><strong>15%</strong><span>LMI applies, at a lower premium than going in at 10%.</span></span></label>
+              <label class="choice"><input type="radio" name="deposit-pct" value="0.10">
+                <span><strong>10%</strong><span>In sooner, with a real LMI premium attached.</span></span></label>
+              <label class="choice"><input type="radio" name="deposit-pct" value="0.05">
+                <span><strong>5%</strong><span>The earliest we'd lend. Expect the largest premium.</span></span></label>
+            </div>
+          </div>
+
+          <label class="switch" style="margin-bottom:1rem">
+            <input type="checkbox" id="fhb" checked><span class="track"></span>
+            <span><strong>First home buyer</strong><br><span class="tiny muted">Applies the duty concession for your first purchase.</span></span>
+          </label>
+
+          <label class="switch">
+            <input type="checkbox" id="capitalise" checked><span class="track"></span>
+            <span><strong>Add LMI to the loan</strong><br><span class="tiny muted">Common practice — keeps the premium out of what you have to save.</span></span>
+          </label>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem">
+          <h5>What you're saving</h5>
+
+          <div class="field" style="margin-top:1.25rem">
+            <label class="field-label" for="savings">Saved so far</label>
+            <div class="input-money"><input class="input" type="text" id="savings" value="96,000" inputmode="numeric"></div>
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="monthly">Putting away each month</label>
+              <span class="range-value tnum" id="monthly-out">$2,400</span>
+            </div>
+            <input class="range" type="range" id="monthly" min="0" max="8000" step="50" value="2400">
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="boost">Roundups from everyday spending</label>
+            <select class="select" id="boost">
+              <option value="0" selected>Off</option>
+              <option value="40">Round to the nearest $1 — about $40 a month</option>
+              <option value="187">Round to the nearest $5 — about $187 a month</option>
+            </select>
+            <p class="field-hint">Estimated from the card transactions on your Bankwest accounts. Keeps running as an offset booster once you've settled.</p>
+          </div>
+
+          <div class="field">
+            <div class="range-head">
+              <label class="field-label mb-0" for="rate">Interest on your Saver</label>
+              <span class="range-value tnum" id="rate-out">4.85%</span>
+            </div>
+            <input class="range" type="range" id="rate" min="0" max="7" step="0.05" value="4.85">
+          </div>
+
+          <div class="field mb-0">
+            <div class="range-head">
+              <label class="field-label mb-0" for="growth">If prices keep rising</label>
+              <span class="range-value tnum" id="growth-out">0% a year</span>
+            </div>
+            <input class="range" type="range" id="growth" min="0" max="10" step="0.5" value="0">
+            <p class="field-hint">The uncomfortable one. A rising market lifts your target while you're saving toward it.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5>What you actually need upfront</h5>
+          <p class="muted small">A deposit is not the only thing you have to have in the account on the day.</p>
+          <dl style="margin:1rem 0 0">
+            <div class="stat-row"><dt id="lbl-deposit">Deposit (20%)</dt><dd id="c-deposit">$164,000</dd></div>
+            <div class="stat-row"><dt id="lbl-duty">Transfer duty</dt><dd id="c-duty">$3,164</dd></div>
+            <div class="stat-row"><dt>Legals, searches, inspections</dt><dd id="c-legals">$3,300</dd></div>
+            <div class="stat-row"><dt>Moving and settling in</dt><dd id="c-moving">$1,500</dd></div>
+            <div class="stat-row"><dt id="lbl-lmi">Lenders' Mortgage Insurance</dt><dd id="c-lmi">Added to your loan</dd></div>
+            <div class="stat-row"><dt><strong>Total to save</strong></dt><dd id="c-total">$171,964</dd></div>
+          </dl>
+          <p class="tiny muted" style="margin-top:1rem" id="c-note"></p>
+        </div>
+      </div>
+
+      <!-- result -->
+      <aside class="result-panel" aria-live="polite">
+        <p class="tiny muted mb-0">You're ready to buy around</p>
+        <div class="bignum bignum--lime" id="ready-date">Feb 2029</div>
+        <p class="tiny muted" id="ready-sub">29 months away · saving $2,400 a month</p>
+
+        <div class="meter" style="margin:1.25rem 0 .5rem"><span id="ready-meter" style="width:56%"></span></div>
+        <p class="tiny muted" id="ready-pct">56% of the way there</p>
+
+        <hr class="divider">
+        <dl style="margin:0">
+          <div class="stat-row"><dt>Saved so far</dt><dd id="r-saved">$96,000</dd></div>
+          <div class="stat-row"><dt>Still to go</dt><dd id="r-togo">$75,964</dd></div>
+          <div class="stat-row"><dt>Interest you'll earn getting there</dt><dd id="r-interest">$11,240</dd></div>
+          <div class="stat-row"><dt>Loan you'd take</dt><dd id="r-loan">$656,000</dd></div>
+          <div class="stat-row"><dt>Repayment at 6.24%</dt><dd id="r-repay">$4,035 / mo</dd></div>
+        </dl>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <a class="btn btn--lime btn--block" href="apply.html?from=deposit-saver">Start my Saver</a>
+        </div>
+        <p class="tiny muted" style="margin-top:.75rem;margin-bottom:0">
+          No lock-in. Take the money out any time — it's yours, we just keep the date honest.
+        </p>
+      </aside>
+    </div>
+
+    <!-- chart -->
+    <div class="card card--pad-lg" style="margin-top:2rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
+        <h4 class="mb-0">Getting there</h4>
+        <span class="pill-note tiny" id="chart-note">Balance against what you need</span>
+      </div>
+      <div style="overflow-x:auto">
+        <svg class="chart" id="saver-chart" viewBox="0 0 720 300" role="img" aria-labelledby="chart-title">
+          <title id="chart-title">Projected savings balance against the amount needed upfront</title>
+        </svg>
+      </div>
+      <div class="chart-legend">
+        <span><i style="background:#b1ef42"></i>Your balance</span>
+        <span><i style="background:#ff911e"></i>What you need upfront</span>
+        <span><i style="background:#9eb5be"></i>Interest earned</span>
+      </div>
+    </div>
+
+    <!-- deposit ladder -->
+    <div style="margin-top:2rem">
+      <h4 style="margin-bottom:.5rem">Or go in earlier</h4>
+      <p class="muted" style="max-width:56ch">Same savings, different deposit. This is the trade you're actually making — months of your life against an insurance premium.</p>
+      <div class="table-scroll" style="margin-top:1.5rem">
+        <table class="cmp">
+          <caption class="sr-only">Time to readiness at each deposit level</caption>
+          <thead>
+            <tr><th scope="col">Deposit</th><th scope="col">Need upfront</th><th scope="col">LMI</th><th scope="col">Ready</th><th scope="col">Sooner by</th><th scope="col">Loan</th><th scope="col">Repayment</th></tr>
+          </thead>
+          <tbody id="ladder"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== AT SETTLEMENT -->
+<section class="section section--ink" id="settlement">
+  <div class="wrap">
+    <div class="feature-split">
+      <div>
+        <span class="eyebrow eyebrow--lime">The day it settles</span>
+        <h2>Your Saver becomes your offset</h2>
+        <p class="lede" style="margin-top:1.5rem">
+          The awkward moment in most deposit accounts is the end of them: the money leaves,
+          the account closes, and you start again from zero somewhere else. Here, whatever's
+          left after settlement stays put and turns into your free 100% Offset Transaction
+          Account — same account, same app, now cutting interest instead of earning it.
+        </p>
+        <ul class="feature-list" style="margin-top:2rem">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No new account to open, no forms at settlement</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>$0 monthly fee — it's the included offset on your Simple Home Loan</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Roundups you set up while saving keep running, now against the mortgage</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="#b1ef42" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Your other Bankwest savings link to it the same day, if you want them to</span></li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn--lime" href="boosters.html">See what the offset does</a>
+        </div>
+      </div>
+
+      <div style="justify-self:center">
+        <div class="phone">
+          <div class="phone__bar"><span>Home Deposit Saver</span><span>Settlement</span></div>
+          <h5 style="margin-bottom:.25rem">Converting your account</h5>
+          <p class="tiny muted">Thu 14 Sep · 10:42am</p>
+          <div class="ledger" style="margin-top:1rem">
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-banana)">1</div>
+              <div><div class="ledger-name">Deposit released to settlement</div><div class="ledger-cat">Paid to your conveyancer</div></div>
+              <div class="ledger-amt">−$167,164</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-powder)">2</div>
+              <div><div class="ledger-name">Account type changed</div><div class="ledger-cat">Saver → 100% Offset · $0/month</div></div>
+              <div class="ledger-amt">✓</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--brand-secondary)">3</div>
+              <div><div class="ledger-name">Linked to Home Loan ••7712</div><div class="ledger-cat">Offsetting from today</div></div>
+              <div class="ledger-amt credit">$18,240</div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-ico" style="background:var(--c-piglet)">4</div>
+              <div><div class="ledger-name">Roundups carried over</div><div class="ledger-cat">Nearest $1 · now feeding the offset</div></div>
+              <div class="ledger-amt">On</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== LEARNING -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Learning Centre</h2>
+      <p class="lede">Short, specific reading for the stage you're actually at.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--brand-primary)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 4v6h6" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h5>What LMI actually is</h5>
+        <p class="muted small">It insures the lender, not you — and you pay for it. Here's when paying it is still the right call.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="#faq">Read</a></div>
+      </article>
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--c-powder)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#1a1a1a" stroke-width="1.6"/><path d="M3 10h18M8 3v4M16 3v4" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h5>Stamp duty, state by state</h5>
+        <p class="muted small">The single biggest line most first buyers forget to save for, and the concessions that can wipe it out.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="#faq">Read</a></div>
+      </article>
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--c-lavender)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18 9 12l4 3 7-8" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h5v5" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h5>Buying in a rising market</h5>
+        <p class="muted small">If prices climb faster than you save, the target moves away from you. What that actually looks like in months.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="#faq">Read</a></div>
+      </article>
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--brand-secondary)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8" stroke="#1a1a1a" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h5>Government schemes worth checking</h5>
+        <p class="muted small">Guarantee schemes and shared equity can move your date forward by years. Eligibility is fiddly; the list isn't.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="#faq">Read</a></div>
+      </article>
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--c-piglet)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10H4Z" stroke="#1a1a1a" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 20v-5h6v5" stroke="#1a1a1a" stroke-width="1.6"/></svg></div>
+        <h5>What a conveyancer does</h5>
+        <p class="muted small">And roughly what they charge, so the number in your projection isn't a surprise.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="#faq">Read</a></div>
+      </article>
+      <article class="card card--paper">
+        <div class="card-swatch" style="background:var(--c-teal)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h5>From Saver to Home Zone</h5>
+        <p class="muted small">When your deposit's close, Home Zone tells you what you can borrow on top of it. Here's the handover.</p>
+        <div class="btn-row"><a class="btn btn--secondary btn--sm" href="home-zone.html">Open Home Zone</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================== FAQ -->
+<section class="section section--paper" id="faq">
+  <div class="wrap">
+    <div class="section-head"><h2>Common questions</h2></div>
+    <div class="accordion">
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s1">Is my money locked up?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s1" hidden><p>No. It's an at-call savings account — withdraw whenever you like, no notice period and no penalty. Taking money out pushes your projected date back, which is the only consequence, and you'll see it move.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s2">Do I have to buy through Bankwest?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s2" hidden><p>No. The Saver is a savings account and comes with no obligation to take a loan from us. The automatic conversion to a free offset only applies if your loan is with us — that's the upside of doing both here, not a condition of opening it.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s3">How accurate is the date?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s3" hidden><p>It's arithmetic on the numbers you give us, so it's exactly as accurate as those numbers stay. The projection updates automatically against what you actually deposit each month rather than what you said you'd deposit, so it tends to get more honest over time — not less.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s4">Why does the target include stamp duty and legals?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s4" hidden><p>Because you can't settle without them. Saving exactly 20% and then discovering you owe another five figures in duty on the same day is the most common way a deposit plan falls over. The number we show you is the number you need in the account.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s5">What if prices rise faster than I save?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s5" hidden><p>Then the target moves away from you, and the projection will say so — including telling you plainly when a 20% deposit is no longer reachable at your current rate of saving. That's usually the moment to look at a smaller deposit with LMI, a guarantee scheme, or a different price bracket. We'd rather show you that early than at the end.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger" aria-expanded="false" aria-controls="s6">Can two of us save into it?<svg class="plus" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="acc-panel" id="s6" hidden><p>Yes — open it jointly and both sets of contributions and roundups feed the same projection. At settlement it converts to an offset held in the same names as the loan.</p></div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin-top:3rem">
+    <p class="small muted">Projected dates are estimates based on the deposit amount, contribution rate and interest rate you enter or that we observe, and assume those continue unchanged. They don't account for property price movement unless you add it, changes to duty concessions, or changes in your circumstances. Stamp duty and LMI figures shown are indicative and calculated on illustrative schedules; the amounts you actually pay are set by your state or territory revenue office and by the insurer. Interest rates on savings accounts are variable and subject to change. Lending criteria, fees and charges apply to home loans. This is general information only and doesn't take your objectives, financial situation or needs into account.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/img/bankwest-logo.svg" alt="Bankwest" width="133" height="20">
+    </a>
+    <div class="footer-grid">
+      <div><h6>Company</h6><ul><li><a href="#">About us</a></li><li><a href="#">Careers</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      <div><h6>Products</h6><ul><li><a href="index.html">Home loans</a></li><li><a href="deposit-saver.html">Home Deposit Saver</a></li><li><a href="#">Savings accounts</a></li><li><a href="index.html#rates">Rates</a></li></ul></div>
+      <div><h6>Services</h6><ul><li><a href="home-zone.html">Home Zone</a></li><li><a href="boosters.html">Repayment Boosters</a></li><li><a href="apply.html">Apply online</a></li></ul></div>
+      <div><h6>Legal</h6><ul><li><a href="#">Terms and conditions</a></li><li><a href="#">Privacy</a></li><li><a href="#">Forms</a></li></ul></div>
+    </div>
+    <div class="footer-legal">
+      <p>Bankwest acknowledges the Traditional Owners of the lands across Australia as the continuing custodians of Country and Culture. We pay our respect to First Nations peoples and their Elders, past and present.</p>
+      <p><strong>This site is a concept prototype.</strong> It is an unofficial design concept — not an official Bankwest site, and not built or operated by Bankwest or the Commonwealth Bank of Australia. All rates, fees and projections are illustrative. Nothing here is financial advice.</p>
+      <p>Concept prototype · <span id="year">2026</span></p>
+    </div>
+
+    <p class="footer-credit">
+      Built by Akash Sur ·
+      <a href="https://github.com/sur-akash" target="_blank" rel="noopener noreferrer">GitHub<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://www.linkedin.com/in/akash-sur/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="arr" aria-hidden="true">↗</span></a> ·
+      <a href="https://sur-akash.github.io/" target="_blank" rel="noopener noreferrer">Website<span class="arr" aria-hidden="true">↗</span></a> ·
+      data is illustrative
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/deposit-saver.js"></script>
+</body>
+</html>
