@@ -588,6 +588,248 @@
   </div>
 </section>
 
+<!-- ============================================ WHAT DOES A HOME COST -->
+<section class="section" id="cost">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What does a home actually cost?</h2>
+      <p class="lede">Drag the price. The block builds as the budget does — and so do the three numbers that decide whether you can have it.</p>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-figure" id="scene-figure">
+      <svg id="cost-scene" viewBox="0 0 1000 420" role="img"
+           aria-labelledby="scene-title" aria-describedby="scene-caption"
+           fill="none" stroke="#1a1a1a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <title id="scene-title">An illustrated block that gains features as the property price rises</title>
+
+        <!-- ------------------------------------- always-on backdrop -->
+        <g stroke="none">
+          <circle cx="150" cy="420" r="145" fill="#9eb5be" fill-opacity=".3"/>
+          <circle cx="530" cy="440" r="175" fill="#9eb5be" fill-opacity=".22"/>
+          <circle cx="890" cy="415" r="135" fill="#9eb5be" fill-opacity=".3"/>
+          <!-- clips the hills to a horizon; matches the card surface -->
+          <rect x="0" y="302" width="1000" height="118" fill="#edefeb"/>
+          <rect x="0" y="302" width="1000" height="42" fill="#9bba42" fill-opacity=".14"/>
+          <!-- clouds: flat overlapping circles, no stroke, so they merge -->
+          <g fill="#ffffff">
+            <circle cx="130" cy="88" r="20"/><circle cx="106" cy="96" r="13"/><circle cx="154" cy="96" r="14"/>
+            <circle cx="520" cy="58" r="17"/><circle cx="498" cy="65" r="12"/><circle cx="542" cy="65" r="12"/>
+            <circle cx="700" cy="102" r="15"/><circle cx="682" cy="109" r="11"/><circle cx="720" cy="109" r="11"/>
+          </g>
+        </g>
+
+        <!-- ------------------------------------------------------ sky -->
+        <g class="sc" data-from="3000000">
+          <circle cx="890" cy="78" r="30" fill="#f3cf38"/>
+          <path d="M928 78h12M916.9 104.9l8.5 8.5M890 116v12M863.1 104.9l-8.5 8.5M852 78h-12M863.1 51.1l-8.5-8.5M890 40V28M916.9 51.1l8.5-8.5" stroke-width="2.2"/>
+        </g>
+        <g class="sc" data-from="2200000" stroke-width="2.2">
+          <path d="M286 90q9-11 18 0"/>
+          <path d="M312 74q9-11 18 0"/>
+          <path d="M334 96q7-9 14 0"/>
+        </g>
+
+        <!-- ----------------------------------------------- background -->
+        <g class="sc" data-from="3000000" fill="#9bba42">
+          <circle cx="70" cy="292" r="13"/><circle cx="96" cy="292" r="13"/><circle cx="122" cy="292" r="13"/>
+          <circle cx="148" cy="292" r="13"/><circle cx="174" cy="292" r="13"/><circle cx="200" cy="292" r="13"/>
+          <circle cx="226" cy="292" r="13"/>
+        </g>
+
+        <g class="sc" data-from="700000">
+          <path d="M620 302v-48" stroke-width="3"/>
+          <circle cx="620" cy="234" r="34" fill="#9bba42"/>
+          <circle cx="594" cy="252" r="19" fill="#9bba42"/>
+        </g>
+
+        <g class="sc" data-from="3000000">
+          <path d="M736 248 787 214l51 34" fill="#b88ebc"/>
+          <rect x="744" y="246" width="86" height="56" rx="3" fill="#ffffff"/>
+          <circle cx="787" cy="272" r="11" fill="#3ea3a3"/>
+        </g>
+
+        <g class="sc" data-from="2200000">
+          <path d="M880 302v-42" stroke-width="3"/>
+          <circle cx="880" cy="242" r="28" fill="#9bba42"/>
+        </g>
+
+        <!-- ----------------------------------------------- foreground -->
+        <rect x="0" y="344" width="1000" height="52" fill="#9bba42" fill-opacity=".24" stroke="none"/>
+        <rect x="0" y="396" width="1000" height="24" fill="#1a1a1a" fill-opacity=".07" stroke="none"/>
+        <path d="M0 344h1000" stroke-width="2.8"/>
+        <path d="M0 396h1000" stroke-width="2" opacity=".45"/>
+
+        <!-- front tree -->
+        <g class="sc" data-from="400000">
+          <path d="M152 344v-58" stroke-width="3"/>
+          <circle cx="152" cy="264" r="30" fill="#9bba42"/>
+          <circle cx="174" cy="284" r="15" fill="#9bba42"/>
+        </g>
+
+        <!-- letterbox -->
+        <g class="sc" data-from="200000">
+          <path d="M276 344v-40" stroke-width="2.4"/>
+          <rect x="262" y="286" width="32" height="20" rx="5" fill="#b88ebc"/>
+        </g>
+
+        <!-- fence, drawn in front of the yard it encloses -->
+        <g class="sc" data-from="700000" stroke-width="2.4">
+          <path d="M40 320h212"/>
+          <path d="M46 310v34M72 310v34M98 310v34M124 310v34M150 310v34M176 310v34M202 310v34M228 310v34"/>
+        </g>
+
+        <!-- bicycle -->
+        <g class="sc" data-from="1600000" stroke-width="2.2">
+          <circle cx="118" cy="328" r="16" fill="#ffffff"/>
+          <circle cx="170" cy="328" r="16" fill="#ffffff"/>
+          <path d="M118 328l18-26h28l6 26M136 302l12 26M132 298h10M164 300l10-6"/>
+        </g>
+
+        <!-- house: core -->
+        <g class="sc" data-from="200000">
+          <rect x="300" y="250" width="170" height="94" rx="3" fill="#ffffff" stroke-width="2.8"/>
+        </g>
+        <g class="sc" data-from="200000" data-to="400000">
+          <rect x="292" y="240" width="186" height="12" rx="4" fill="#ff911e"/>
+        </g>
+        <g class="sc" data-from="400000" data-to="1600000">
+          <path d="M288 252 385 192l97 60Z" fill="#ff911e" stroke-width="2.8"/>
+        </g>
+
+        <!-- house: upper floor -->
+        <g class="sc" data-from="1600000">
+          <rect x="300" y="170" width="170" height="82" rx="3" fill="#ffffff" stroke-width="2.8"/>
+          <circle cx="385" cy="200" r="18" fill="#3ea3a3"/>
+        </g>
+        <g class="sc" data-from="1600000">
+          <path d="M288 172 385 112l97 60Z" fill="#ff911e" stroke-width="2.8"/>
+        </g>
+
+        <!-- balcony -->
+        <g class="sc" data-from="1600000" stroke-width="2.2">
+          <path d="M288 252h194M292 228h186"/>
+          <path d="M306 228v24M334 228v24M362 228v24M390 228v24M418 228v24M446 228v24"/>
+        </g>
+
+        <!-- windows and door -->
+        <g class="sc" data-from="200000">
+          <rect x="322" y="276" width="42" height="42" rx="2" fill="#f3cf38"/>
+          <path d="M343 276v42M322 297h42" stroke-width="2.2"/>
+        </g>
+        <g class="sc" data-from="400000">
+          <circle cx="436" cy="296" r="17" fill="#3ea3a3"/>
+        </g>
+        <g class="sc" data-from="200000">
+          <path d="M376 344v-34a18 18 0 0 1 36 0v34Z" fill="#b1ef42" stroke-width="2.6"/>
+          <circle cx="405" cy="322" r="3" fill="#1a1a1a" stroke="none"/>
+        </g>
+
+        <!-- side extension + solar -->
+        <g class="sc" data-from="700000">
+          <rect x="470" y="284" width="98" height="60" rx="3" fill="#f3cf38"/>
+          <rect x="496" y="304" width="34" height="26" rx="2" fill="#ffffff" stroke-width="2.2"/>
+        </g>
+        <g class="sc" data-from="1100000" stroke-width="2.2">
+          <path d="M478 284l22-18h60l-22 18Z" fill="#3ea3a3"/>
+          <path d="M498 284l22-18M518 284l22-18"/>
+        </g>
+
+        <!-- carport + car -->
+        <g class="sc" data-from="1100000">
+          <rect x="578" y="264" width="142" height="12" rx="4" fill="#9eb5be"/>
+          <path d="M590 276v68M706 276v68" stroke-width="2.4"/>
+        </g>
+        <g class="sc" data-from="1100000" stroke-width="2.2">
+          <rect x="598" y="302" width="98" height="26" rx="12" fill="#f8bfd1"/>
+          <path d="M616 302l10-16h42l10 16" fill="#ffffff"/>
+          <circle cx="620" cy="328" r="12" fill="#ffffff"/>
+          <circle cx="674" cy="328" r="12" fill="#ffffff"/>
+        </g>
+
+        <!-- deck + pool -->
+        <g class="sc" data-from="2200000" stroke-width="2.2">
+          <rect x="718" y="322" width="90" height="20" rx="3" fill="#f3cf38"/>
+          <path d="M718 329h90M718 336h90"/>
+        </g>
+        <g class="sc" data-from="2200000" stroke-width="2.4">
+          <ellipse cx="880" cy="330" rx="72" ry="22" fill="#9eb5be"/>
+          <path d="M846 330q10-7 20 0t20 0" stroke-width="2"/>
+          <path d="M822 318v-14M834 318v-14M822 304h12" stroke-width="2"/>
+        </g>
+
+        <!-- front path, running down to the footpath -->
+        <g class="sc" data-from="400000">
+          <path d="M374 344h44l18 52h-80Z" fill="#ffffff" stroke-width="2.4"/>
+          <path d="M370 362h52M365 379h62" stroke-width="2"/>
+        </g>
+
+        <!-- dog -->
+        <g class="sc" data-from="1600000" stroke-width="2.2">
+          <path d="M286 366q-12-8-6-18"/>
+          <rect x="286" y="360" width="46" height="22" rx="11" fill="#f8bfd1"/>
+          <circle cx="340" cy="356" r="14" fill="#f8bfd1"/>
+          <path d="M330 346q6-9 13-3"/>
+          <path d="M296 382v10M310 382v10M320 382v10M328 382v10"/>
+          <circle cx="345" cy="354" r="2.4" fill="#1a1a1a" stroke="none"/>
+        </g>
+      </svg>
+      </div>
+
+      <!-- --------------------------------------------------- control -->
+      <div class="scene-control">
+        <div class="scene-bubble" id="scene-bubble">
+          <span class="scene-bubble__label">Property price</span>
+          <strong class="tnum" id="scene-price">$800,000</strong>
+        </div>
+        <div class="scene-track">
+          <div class="scene-ticks" id="scene-ticks" aria-hidden="true"></div>
+          <input class="range" type="range" id="scene-range"
+                 min="200000" max="3000000" step="25000" value="800000"
+                 aria-label="Property price">
+        </div>
+        <p class="scene-caption" id="scene-caption"></p>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------------- readouts -->
+    <div class="grid grid-3" style="margin-top:1.5rem">
+      <article class="card card--paper">
+        <p class="tiny muted mb-0">Repayments / <strong>Month</strong></p>
+        <div class="bignum tnum" id="cost-repay" style="font-size:2.5rem">$3,937</div>
+        <p class="tiny muted mb-0">Principal and interest at 6.24% p.a. over 30 years</p>
+      </article>
+      <article class="card card--paper">
+        <p class="tiny muted mb-0">Cash needed <strong>upfront</strong></p>
+        <div class="bignum tnum" id="cost-upfront" style="font-size:2.5rem">$195,535</div>
+        <p class="tiny muted mb-0">20% deposit, transfer duty, legals and moving</p>
+      </article>
+      <article class="card card--paper">
+        <p class="tiny muted mb-0">Min income / <strong>Year</strong></p>
+        <div class="bignum tnum" id="cost-income" style="font-size:2.5rem">$109,856</div>
+        <p class="tiny muted mb-0">Gross household, on a 43% debt-to-income guide</p>
+      </article>
+    </div>
+
+    <div class="btn-row" style="margin-top:1.5rem">
+      <a class="btn btn--primary" href="deposit-saver.html#projection">
+        <span class="btn-dot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Save that deposit
+      </a>
+      <a class="btn btn--secondary" href="home-zone.html">See what you could actually borrow</a>
+    </div>
+
+    <p class="tiny muted" style="margin-top:1.5rem;max-width:74ch">
+      Illustrative only. Assumes you borrow 80% of the property price at the 6.24% p.a. Simple Home Loan
+      variable rate over 30 years with principal and interest repayments. Cash upfront assumes a 20% deposit
+      with no first home concession, plus indicative transfer duty, $3,300 of legals and searches and $1,500
+      of moving costs. Minimum income applies a 43% debt-to-income guide and takes no account of your other
+      commitments — <a class="link-arrow" href="home-zone.html">Home Zone</a> does that properly from your
+      actual accounts.
+    </p>
+  </div>
+</section>
+
 <!-- ================================================ 6. TWO WAYS TO APPLY -->
 <section class="section section--paper" id="apply">
   <div class="wrap">
@@ -1000,5 +1242,6 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/home.js"></script>
+<script src="assets/js/cost-scene.js"></script>
 </body>
 </html>

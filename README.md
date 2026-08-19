@@ -55,6 +55,33 @@ of the logo file and centred in a square viewBox.
 | 5 | **Self-serve digital application** — a parallel path to the specialist model, with triage that routes honestly to a human when the case warrants it | [apply.html](apply.html) |
 | 6 | **Repayment Boosters** — roundups, payment splits and Rate Keeper feeding the offset | [boosters.html](boosters.html) |
 
+## The cost-of-a-home scene
+
+Under the calculators on the homepage, a price slider drives an illustrated block
+that builds as the budget does — the same idea as Up's "How much does a home
+cost?", built differently.
+
+Up ships **53 pre-drawn SVG frames** (`01.svg` … `53.svg`) stacked in one box with
+exactly one at `display: block`; the slider picks a frame index. It's a flipbook,
+so the whole picture hard-swaps at every step.
+
+This is one composed scene instead. Each of the 27 parts carries its own
+`data-from` (and sometimes `data-to`) threshold, so parts appear and disappear
+individually and animate in on their own — the carport arrives without the house
+redrawing. Seven tiers at $200k / $400k / $700k / $1.1M / $1.6M / $2.2M / $3M turn
+a studio into a two-storey place with a carport, pool, granny flat and hedge run.
+The `data-to` pairs handle genuine swaps: the flat roof gives way to a pitched one
+at $400k, which moves up a floor at $1.6M.
+
+The scene is inherently wide, so below 720px it keeps a 640px minimum width inside
+its own scroller and pans rightward as the block grows, rather than shrinking to an
+unreadable strip.
+
+Readouts are calculated, not canned: repayment on an 80% loan at 6.24% over 30
+years, cash upfront as a 20% deposit plus transfer duty, legals and moving, and a
+minimum gross income on a 43% debt-to-income guide (the same rule of thumb Up
+applies — annual repayments ÷ 0.43).
+
 ## Structure
 
 ```
@@ -66,6 +93,7 @@ apply.html            Path triage + six-step self-serve application
 assets/img/           Bankwest logo (from bankwest.com.au) + favicon cut from its mark
 assets/css/style.css  Design system (tokens mirrored from the live site)
 assets/js/main.js     Nav, tabs, accordions, currency/date formatting, loan maths
+assets/js/cost-scene.js  Threshold-driven illustration + price readouts
 assets/js/*.js        One module per interactive page
 netlify.toml          Publish config, headers, pretty-URL redirects
 ```

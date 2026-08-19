@@ -253,12 +253,13 @@ p  { margin: 0 0 var(--s-small); }
   --brand-h: 20px;
   display: flex; align-items: center; gap: calc(var(--brand-h) * .30);
   text-decoration: none; margin-right: var(--s-small);
+  flex: 0 0 auto;            /* never let the lockup be squeezed */
 }
 .brand img { height: var(--brand-h); width: auto; flex: 0 0 auto; }
 .brand-word {
   font-size: calc(var(--brand-h) * 1.04);
   font-weight: 500; letter-spacing: -0.02em; line-height: 1;
-  color: var(--text-primary);
+  color: var(--text-primary); white-space: nowrap;
 }
 
 .nav-link {
@@ -299,11 +300,18 @@ p  { margin: 0 0 var(--s-small); }
 }
 @media (max-width: 720px) {
   .nav-secondary .nav-link { display: none; }
-  .brand { --brand-h: 16px; }
+  .brand { --brand-h: 16px; margin-right: 0; }
   .nav-pill { padding: .5rem .5rem .5rem 1rem; }
   .nav-shell { gap: var(--s-tiny); }
   .nav-login { padding: .5rem 1rem; font-size: var(--t-small); }
   .nav-icon-btn { width: 2.5rem; height: 2.5rem; }
+}
+/* The lockup is wider than the old wordmark, so drop the decorative search
+   button before the brand starts colliding with the menu. */
+@media (max-width: 560px) {
+  .nav-secondary .nav-icon-btn { display: none; }
+  .brand { --brand-h: 15px; }
+  .nav-pill { padding: .5rem .5rem .5rem .75rem; }
 }
 
 .mobile-nav { display: none; padding: var(--s-small) 0; }
@@ -507,6 +515,77 @@ table.cmp .cell-note { display: block; color: var(--text-secondary); font-size: 
 .progress-track { display: flex; gap: .375rem; margin-bottom: var(--s-big); }
 .progress-track span { height: .3rem; flex: 1; border-radius: var(--r-pill); background: var(--divider); }
 .progress-track span[data-done="true"] { background: var(--surface-inverse-0); }
+
+/* ------------------------------------------------------ cost-of-a-home  */
+
+.scene-card {
+  background: var(--surface-1);
+  border-radius: var(--r-normal);
+  padding: var(--s-big) var(--s-big) var(--s-huge);
+  overflow: hidden;
+}
+@media (max-width: 640px) { .scene-card { padding: var(--s-small) var(--s-small) var(--s-big); } }
+
+/* The scene is inherently wide. Below the breakpoint it keeps a legible
+   minimum width and pans inside its own scroller instead of shrinking to
+   an unreadable strip. */
+.scene-figure { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.scene-figure::-webkit-scrollbar { display: none; }
+#cost-scene { width: 100%; height: auto; display: block; }
+@media (max-width: 720px) { #cost-scene { min-width: 640px; } }
+
+/* Every scene part carries its own price threshold and animates in on its
+   own, so the block assembles piece by piece rather than hard-swapping. */
+#cost-scene .sc {
+  opacity: 0;
+  transform: translateY(14px) scale(.92);
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transition: opacity .34s ease, transform .46s cubic-bezier(.2, .8, .2, 1);
+}
+#cost-scene .sc.on { opacity: 1; transform: none; }
+
+.scene-control { margin-top: var(--s-normal); }
+
+.scene-track { position: relative; padding-top: .25rem; }
+.scene-track .range { position: relative; z-index: 2; margin: 0; }
+
+.scene-ticks { position: absolute; inset: .55rem .75rem auto; height: 6px; pointer-events: none; z-index: 1; }
+.scene-ticks span {
+  position: absolute; top: 0; width: 2px; height: 6px;
+  border-radius: 1px; background: #1a1a1a; opacity: .28;
+  transform: translateX(-50%);
+}
+.scene-ticks span[data-reached="true"] { background: var(--surface-inverse-0); opacity: .75; }
+
+.scene-bubble {
+  position: relative;
+  left: clamp(3.5rem, calc(var(--p, .21) * (100% - 1.5rem) + .75rem), calc(100% - 3.5rem));
+  transform: translateX(-50%);
+  display: inline-flex; flex-direction: column; align-items: center; gap: .1rem;
+  background: var(--surface-inverse-0); color: var(--text-on-inverse);
+  padding: .5rem 1rem .625rem; border-radius: var(--r-tiny);
+  white-space: nowrap; margin-bottom: .625rem;
+  transition: left .12s linear;
+}
+.scene-bubble::after {
+  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 7px solid transparent; border-top-color: var(--surface-inverse-0);
+}
+.scene-bubble__label { font-size: var(--t-tiny); color: var(--text-on-inverse-secondary); }
+.scene-bubble strong { font-size: var(--t-big); font-weight: 600; letter-spacing: -0.02em; }
+
+.scene-caption {
+  margin: var(--s-normal) 0 0;
+  font-size: var(--t-small); color: var(--text-secondary);
+  min-height: 2.75em;
+}
+.scene-caption strong { color: var(--text-primary); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  #cost-scene .sc { transition: none; }
+  .scene-bubble { transition: none; }
+}
 
 /* ---------------------------------------------------------------- chart  */
 
