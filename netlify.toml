@@ -11,10 +11,14 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
 
+# Asset filenames are not content-hashed (there is no build step), so style.css
+# keeps its name across deploys. A long max-age would therefore serve stale CSS
+# to returning visitors after every change. Netlify sends strong ETags, so
+# revalidating costs a conditional request that answers 304 with no body.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # Pretty URLs: /home-zone -> /home-zone.html
 [[redirects]]
