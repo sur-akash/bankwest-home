@@ -302,23 +302,17 @@ p  { margin: 0 0 var(--s-small); }
 }
 .nav-pill--plain { background: var(--surface-glass); }
 
-/* Brand lockup: the official Bankwest logo with "home" set alongside it.
-   The logo is 133x20, so the wordmark's x-height is 11 units. Figtree needs
-   ~1.04x the logo height to land on the same x-height, and 500 matches the
-   wordmark's stroke weight. Both are expressed against --brand-h so the
-   lockup scales as one piece. */
+/* Brand lockup: bankwest-home-lockup.svg — the supplied outlined artwork with
+   its backdrop removed and cropped to the artwork, so it sits directly on the
+   pill's own orange and scales purely by height. Aspect is 759:80 (~9.49:1),
+   so --brand-h is the only knob. */
 .brand {
   --brand-h: 20px;
-  display: flex; align-items: center; gap: calc(var(--brand-h) * .30);
+  display: flex; align-items: center;
   text-decoration: none; margin-right: var(--s-small);
   flex: 0 0 auto;            /* never let the lockup be squeezed */
 }
 .brand img { height: var(--brand-h); width: auto; flex: 0 0 auto; }
-.brand-word {
-  font-size: calc(var(--brand-h) * 1.04);
-  font-weight: 500; letter-spacing: -0.02em; line-height: 1;
-  color: var(--text-primary); white-space: nowrap;
-}
 
 .nav-link {
   display: inline-flex; align-items: center; gap: .3rem;

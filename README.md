@@ -31,11 +31,22 @@ bankwest.com.au apart from two fixes: the published file uses JSX-style
 `clipPath` / `fillOpacity` attributes and points at a clip path whose `<defs>`
 were never included, neither of which is valid in an HTML document.
 
-"home" sits beside it as live text rather than baked-in artwork. The logo is
-133×20, so the wordmark's x-height is 11 units; Figtree needs ~1.04× the logo
-height to land on the same x-height, and weight 500 matches the wordmark's
-stroke. Both are expressed against a single `--brand-h` custom property so the
-lockup scales as one piece and drops to 16px on mobile.
+The header uses `assets/img/bankwest-home-lockup.svg`, derived from the supplied
+`bankwest-home-outlined.svg` — the Bankwest logo beside an outlined "home" built
+from stroked letterforms (an 11-unit stroke with a 5.8-unit stroke knocked out of
+it, leaving a ~2.6-unit ring).
+
+Two changes were needed to make it work in the header, neither touching the
+artwork itself. The supplied file carries its own `#ff9c3d` backdrop, which
+rendered as a lighter rectangle against the nav pill's `#ff911e`; that rect is
+dropped so the lockup sits on the pill's own orange. And the file is 840×160
+with 40px of padding, so sizing it by height shrank the artwork inside its own
+box; the viewBox is cropped to the artwork bounds (`40 40 759 80`) so `height`
+scales the lockup itself. Stroke weights are unchanged — at that crop the
+original ring is legible down to 15px. `--brand-h` remains the only knob.
+
+The supplied original is kept untouched for large-format use, where the full
+backdrop is the point.
 
 The footer carries the plain logo with no "home", reversed to white via
 `filter: invert(1)` — the source is solid black with alpha preserved, so this
@@ -117,7 +128,7 @@ home-zone.html        Borrowing estimate from transaction data
 deposit-saver.html    Deposit projection with an upfront-cost breakdown and a savings chart
 boosters.html         Offset simulator: roundups, splits, Rate Keeper
 apply.html            Path triage + six-step self-serve application
-assets/img/           Bankwest logo (from bankwest.com.au) + favicon cut from its mark
+assets/img/           Header lockup, Bankwest logo (from bankwest.com.au), favicon
 assets/css/style.css  Design system (tokens mirrored from the live site)
 assets/js/main.js     Nav, tabs, accordions, currency/date formatting, loan maths
 assets/js/cost-scene.js  Threshold-driven illustration + price readouts
