@@ -304,7 +304,12 @@ p  { margin: 0 0 var(--s-small); }
 
 .nav-pill {
   display: flex; align-items: center; gap: var(--s-tiny);
-  background: var(--brand-primary-glass); border-radius: var(--r-big);
+  /* Opaque rather than the glass tint, because the outlined "home" in the
+     lockup knocks out to --lockup-bg and the two must not drift. #ff9c35 is
+     exactly what #ff911ee5 composited to over the header's white background,
+     so this is visually identical to what it replaced. */
+  --lockup-bg: #ff9c35;
+  background: var(--lockup-bg); border-radius: var(--r-big);
   padding: .625rem .75rem .625rem 1.25rem;
   backdrop-filter: blur(12px);
 }
@@ -313,22 +318,24 @@ p  { margin: 0 0 var(--s-small); }
    flex:none) crushes the burger to a sliver when space gets tight. */
 .nav-pill > * { flex: 0 0 auto; }
 
-/* Brand lockup: bankwest-home-lockup.svg — the supplied outlined artwork with
-   its backdrop removed and cropped to the artwork, so it sits directly on the
-   pill's own orange and scales purely by height. Aspect is 759:80 (~9.49:1),
-   so --brand-h is the only knob. */
+/* Brand lockup: the Bankwest mark as an <img>, plus the outlined "home" as
+   inline SVG. The supplied home-outlined.svg draws its outline with a mask
+   (an 11-wide stroke knocked out by a 5.8-wide one), and masks are rasterised
+   into a bitmap — which is what pixelated it. The inline copy paints the same
+   two strokes directly instead: ink at 11, then --lockup-bg at 5.8 on top.
+   Identical shape, no mask, so it stays true vector at any size or zoom.
+   Inline (not <img>) because the knockout has to read --lockup-bg. */
 .brand {
-  /* The outlined "home" ring is 2.6 units on an 80-unit-tall lockup, so its
-     rendered weight is 0.0325 x --brand-h. At 20px that was 0.65 CSS px — half
-     a device pixel on a 2x display, which is what made it look ragged. At 30px
-     it lands on ~2 device px and resolves cleanly. Mobile drops to 16/15px,
-     where it is ~1 device px on any 2x-or-better phone. */
   --brand-h: 30px;
-  display: flex; align-items: center;
+  display: flex; align-items: center; gap: calc(var(--brand-h) * .325);
   text-decoration: none; margin-right: var(--s-small);
   flex: 0 0 auto;            /* never let the lockup be squeezed */
 }
-.brand img { height: var(--brand-h); width: auto; flex: 0 0 auto; }
+/* The lockup is two pieces so each stays true vector. The mark is 133x20; the
+   outlined "home" is 201x62 and, in the source artwork, sits 62/80 as tall as
+   the mark with a 26/80 gap between them — hence the ratios below. */
+.brand-mark { height: var(--brand-h); width: auto; flex: 0 0 auto; }
+.brand-home { height: calc(var(--brand-h) * .775); width: auto; flex: 0 0 auto; overflow: visible; }
 
 .nav-link {
   display: inline-flex; align-items: center; gap: .3rem;

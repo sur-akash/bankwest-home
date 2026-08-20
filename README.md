@@ -31,32 +31,42 @@ bankwest.com.au apart from two fixes: the published file uses JSX-style
 `clipPath` / `fillOpacity` attributes and points at a clip path whose `<defs>`
 were never included, neither of which is valid in an HTML document.
 
-The header uses `assets/img/bankwest-home-lockup.svg`, derived from the supplied
-`bankwest-home-outlined.svg` — the Bankwest logo beside an outlined "home" built
-from stroked letterforms (an 11-unit stroke with a 5.8-unit stroke knocked out of
-it, leaving a ~2.6-unit ring).
+The header lockup is two pieces: the Bankwest mark as an `<img>`, and the
+outlined "home" as **inline SVG**.
 
-**Sizing matters here.** The ring is 2.6 units on an 80-unit-tall lockup, so its
-rendered weight is `0.0325 × --brand-h`. At 20px that is 0.65 CSS px — about
-1.3 device pixels on a 2× display, landing between one and two and rendering as
-a soft, ragged line while the solid "bankwest" beside it stays crisp. It is not
-a mask-rasterisation problem (`<img>` and inline SVG were compared under 6× zoom
-and both stay vector-sharp); it is simply a sub-pixel line. `--brand-h` is 30px
-on desktop, where the ring resolves to ~2 device px, and 16/15px on mobile,
-where it is ~1 device px on any 2×-or-better phone. Values in between are worse
-than either, so the tiers step rather than scale smoothly.
+The supplied `home-outlined.svg` draws its outline with a mask — an 11-wide
+stroke with a 5.8-wide stroke knocked out of it. SVG masks are rasterised into a
+bitmap before compositing, so the outline arrived as pixels while the plain-path
+"bankwest" beside it stayed sharp. That is what looked pixelated, and no amount
+of resizing fixes it.
 
-Two further changes were needed to make it work in the header, neither touching
-the artwork itself. The supplied file carries its own `#ff9c3d` backdrop, which
-rendered as a lighter rectangle against the nav pill's `#ff911e`; that rect is
-dropped so the lockup sits on the pill's own orange. And the file is 840×160
-with 40px of padding, so sizing it by height shrank the artwork inside its own
-box; the viewBox is cropped to the artwork bounds (`40 40 759 80`) so `height`
-scales the lockup itself. Stroke weights are unchanged — at that crop the
-original ring is legible down to 15px. `--brand-h` remains the only knob.
+The inline copy drops the mask and paints the same two strokes directly instead:
+ink at width 11, then `--lockup-bg` at width 5.8 on top. The painted result is
+identical to the mask (union of the wide strokes, minus union of the narrow
+ones) but it is ordinary vector geometry, so it stays sharp at any size or zoom.
+It is inline rather than an `<img>` because the knockout stroke has to read
+`--lockup-bg` from the page.
 
-The supplied original is kept untouched for large-format use, where the full
-backdrop is the point.
+`--lockup-bg` is declared on `.nav-pill` and used as that pill's own
+`background`, so the knockout and the surface behind it cannot drift apart. The
+pill is opaque `#ff9c35` — exactly what the old `#ff911ee5` composited to over
+the header's white — rather than a translucent tint, for the same reason.
+
+`assets/img/home-outlined-vector.svg` is the same mask-free construction as a
+standalone file with the colours baked in, for contexts that cannot supply the
+variable. Both supplied originals are kept untouched.
+
+**Sizing.** The ring is 2.6 units on a 62-unit-tall "home", so its rendered
+weight scales with `--brand-h`: 30px on desktop, 16/15px on mobile. The mark is
+133×20 and the "home" 201×62; in the source artwork the latter sits 62/80 as
+tall as the mark with a 26/80 gap, which is where the `.775` and `.325` ratios
+in the CSS come from.
+
+The first supplied lockup, `bankwest-home-outlined.svg`, also carried its own
+`#ff9c3d` backdrop and 40px of padding inside an 840×160 canvas — the backdrop
+showed as a lighter rectangle against the pill, and the padding meant sizing by
+height shrank the artwork inside its own box. Both are moot now that the mark
+and the word are placed separately.
 
 The footer carries the plain logo with no "home", reversed to white via
 `filter: invert(1)` — the source is solid black with alpha preserved, so this
