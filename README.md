@@ -36,8 +36,18 @@ The header uses `assets/img/bankwest-home-lockup.svg`, derived from the supplied
 from stroked letterforms (an 11-unit stroke with a 5.8-unit stroke knocked out of
 it, leaving a ~2.6-unit ring).
 
-Two changes were needed to make it work in the header, neither touching the
-artwork itself. The supplied file carries its own `#ff9c3d` backdrop, which
+**Sizing matters here.** The ring is 2.6 units on an 80-unit-tall lockup, so its
+rendered weight is `0.0325 × --brand-h`. At 20px that is 0.65 CSS px — about
+1.3 device pixels on a 2× display, landing between one and two and rendering as
+a soft, ragged line while the solid "bankwest" beside it stays crisp. It is not
+a mask-rasterisation problem (`<img>` and inline SVG were compared under 6× zoom
+and both stay vector-sharp); it is simply a sub-pixel line. `--brand-h` is 30px
+on desktop, where the ring resolves to ~2 device px, and 16/15px on mobile,
+where it is ~1 device px on any 2×-or-better phone. Values in between are worse
+than either, so the tiers step rather than scale smoothly.
+
+Two further changes were needed to make it work in the header, neither touching
+the artwork itself. The supplied file carries its own `#ff9c3d` backdrop, which
 rendered as a lighter rectangle against the nav pill's `#ff911e`; that rect is
 dropped so the lockup sits on the pill's own orange. And the file is 840×160
 with 40px of padding, so sizing it by height shrank the artwork inside its own

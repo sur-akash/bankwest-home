@@ -309,13 +309,21 @@ p  { margin: 0 0 var(--s-small); }
   backdrop-filter: blur(12px);
 }
 .nav-pill--plain { background: var(--surface-glass); }
+/* Nothing in a nav pill may be squeezed — without this the brand (which is
+   flex:none) crushes the burger to a sliver when space gets tight. */
+.nav-pill > * { flex: 0 0 auto; }
 
 /* Brand lockup: bankwest-home-lockup.svg — the supplied outlined artwork with
    its backdrop removed and cropped to the artwork, so it sits directly on the
    pill's own orange and scales purely by height. Aspect is 759:80 (~9.49:1),
    so --brand-h is the only knob. */
 .brand {
-  --brand-h: 20px;
+  /* The outlined "home" ring is 2.6 units on an 80-unit-tall lockup, so its
+     rendered weight is 0.0325 x --brand-h. At 20px that was 0.65 CSS px — half
+     a device pixel on a 2x display, which is what made it look ragged. At 30px
+     it lands on ~2 device px and resolves cleanly. Mobile drops to 16/15px,
+     where it is ~1 device px on any 2x-or-better phone. */
+  --brand-h: 30px;
   display: flex; align-items: center;
   text-decoration: none; margin-right: var(--s-small);
   flex: 0 0 auto;            /* never let the lockup be squeezed */
@@ -358,6 +366,10 @@ p  { margin: 0 0 var(--s-small); }
   .nav-burger { display: grid; }
   .brand { margin-right: 0; }
 }
+/* A 30px lockup is 285px wide and stops fitting alongside the second pill at
+   roughly 780px, so step it down before that rather than at the 720 breakpoint. */
+@media (max-width: 840px) { .brand { --brand-h: 16px; } }
+
 @media (max-width: 720px) {
   .nav-secondary .nav-link { display: none; }
   .brand { --brand-h: 16px; margin-right: 0; }
