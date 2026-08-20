@@ -211,10 +211,13 @@ p  { margin: 0 0 var(--s-small); }
 .btn--primary {
   --badge: 2.5rem;
   --inset: 6px;
+  --tuck: 2px;               /* how far the fill hides inside the badge at rest */
   position: relative;
   isolation: isolate;
   justify-content: center;
-  min-height: calc(var(--badge) + var(--inset) * 2);
+  /* +2px covers the 1px transparent border top and bottom, so the padding box
+     is exactly --badge + 2*--inset and the badge sits truly centred. */
+  min-height: calc(var(--badge) + var(--inset) * 2 + 2px);
   padding: 0 calc(var(--badge) + 1.25rem);
   background: var(--surface-inverse-0);
   color: var(--text-on-inverse);
@@ -226,13 +229,18 @@ p  { margin: 0 0 var(--s-small); }
 .btn--primary::before {
   content: "";
   position: absolute; z-index: -1;
-  left: var(--inset);
-  top: 50%; margin-top: calc(var(--badge) / -2);
-  width: var(--badge); height: var(--badge);
+  /* Anchored exactly like .btn-dot (top/left from --inset, never 50%) so the
+     two circles are provably concentric, then tucked --tuck inside it. Equal
+     size would leave each circle antialiasing its own edge and the orange
+     would fringe through; the tuck hides it without touching the animation. */
+  left: calc(var(--inset) + var(--tuck));
+  top: calc(var(--inset) + var(--tuck));
+  width: calc(var(--badge) - var(--tuck) * 2);
+  height: calc(var(--badge) - var(--tuck) * 2);
   border-radius: var(--r-pill);
   background: var(--brand-primary);
   transition: width .4s ease-in-out, height .4s ease-in-out,
-              left .4s ease-in-out, top .4s ease-in-out, margin-top .4s ease-in-out;
+              left .4s ease-in-out, top .4s ease-in-out;
 }
 .btn--primary .btn-dot {
   position: absolute;
@@ -250,7 +258,7 @@ p  { margin: 0 0 var(--s-small); }
 /* Expands over the whole pill including the 1px transparent border, so the
    hover state is orange edge to edge the way the live button is. */
 .btn--primary:hover::before, .btn--primary:focus-visible::before {
-  left: -1px; top: -1px; margin-top: 0;
+  left: -1px; top: -1px;
   width: calc(100% + 2px); height: calc(100% + 2px);
 }
 .btn--primary:hover .btn-dot, .btn--primary:focus-visible .btn-dot {

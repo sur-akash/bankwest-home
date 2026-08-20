@@ -80,11 +80,20 @@ arrow un-rotates from ↗ to →. 400ms, ease-in-out.
 
 Ours gets there with CSS only. The wipe is a `::before` (so no extra markup),
 kept above the pill but below the label with `isolation: isolate` and
-`z-index: -1`. At rest it is sized from `--badge` rather than from the button
-box, so it is exactly the badge and therefore invisible underneath it; on hover
-it expands past the 1px border to cover the pill edge to edge. The badge itself
-animates `left` from `--inset` to `calc(100% - --badge - --inset)`, which lands
-it flush right at any button width without JavaScript.
+`z-index: -1`. On hover it expands past the 1px border to cover the pill edge to
+edge, and the badge animates `left` from `--inset` to
+`calc(100% - --badge - --inset)`, which lands it flush right at any button width
+without JavaScript.
+
+At rest the fill hides behind the badge, and two details make that airtight.
+Both are anchored the same way — `top`/`left` off `--inset`, never `top: 50%` —
+so they are provably concentric; anchoring them differently put them 1px apart,
+because the pill's `min-height` is a border box while an absolutely positioned
+child resolves against the padding box (hence the `+ 2px` in `min-height`). And
+the fill is tucked `--tuck` (2px) inside the badge rather than matching it
+exactly: two coincident circles each antialias their own edge, which let a thin
+orange ring bleed through. The tuck is invisible in motion because the fill is
+behind the badge until the wipe starts, so the animation is unchanged.
 
 The arrow is stored as a plain right-arrow path and rotated −45° by CSS at rest,
 so a single icon covers both states. `--badge` and `--inset` are the only knobs;
