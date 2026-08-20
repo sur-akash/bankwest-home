@@ -168,24 +168,9 @@ netlify.toml          Publish config, headers, pretty-URL redirects
 Everything is static. No build step, no dependencies, no network calls beyond the
 Google Fonts stylesheet.
 
-## Running it locally
+## Website link
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open <http://localhost:8000>.
-
-## Deploying to Netlify
-
-Drag the folder onto <https://app.netlify.com/drop>, or:
-
-```bash
-npx netlify-cli deploy --dir . --prod
-```
-
-`netlify.toml` sets the publish directory, security headers and extensionless
-URL rewrites, so no dashboard configuration is needed.
+https://bankwesthome.netlify.app/
 
 ## The financial model
 
